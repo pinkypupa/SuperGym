@@ -21,7 +21,7 @@ $color-torch-red-error: #ff121f;
 
 
 // Gradient
-$main-red-to-right: conic-gradient(from 151deg at 16.03% 39.06%, #003d85 32.23633825778961deg, #b80027 313.3060026168823deg);
+$main-red-to-right: conic-gradient(from 151deg at 16% 39%, #003d85 32deg, #b80027 313deg);
 $outlining-red-to-right: linear-gradient(97deg, $color-torch-red 17%, #003eb7 95%);
 $additional-red-to-right: linear-gradient(128deg, $color-crimson 0%, #0041ca 46%);
 
@@ -38,7 +38,8 @@ $fz-default: 16px;
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
 $ff-rouble: "Rouble", "Arial", sans-serif;
 
-$ff-placeholder: "Roboto Condensed", "Arial", sans-serif;
+$ff-roboto: "Roboto Condensed", "Arial", sans-serif;
+$ff-alumni: "Alumni Sans", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------

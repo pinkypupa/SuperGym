@@ -18,11 +18,45 @@
 </head>
 
 <body>
-  <div class="wrapper">
+  <div class="main-wrapper">
     <header>
-      <div class="container"></div>
+      <div class="header-wrapper container">
+        <h1 class="visually-hidden">Фитнес центр SuperGym в Омске</h1>
+        <div class="header-wrapper__nav navigation">
+          <!-- <a href="index.html"> -->
+          <img src="img/svg/main-logo.svg" width="120" height="26" alt="Логотип компании SuperGym">
+          <!-- </a> -->
+          <a href="tel:+78005555555">8-800-555-55-55</a>
+        </div>
+        <div class="header-wrapper__hero hero">
+          <div class="hero__description">
+            <p>Омск</p>
+            <h2>Фитнес центр</h2>
+            <ul>
+              <li>Тренажёрный зал</li>
+              <li>Групповые занятия</li>
+              <li>Кардио-зона</li>
+            </ul>
+            <a href="#">Купить абонемент</a>
+          </div>
+          <!-- <div> -->
+            <picture>
+              <!-- <source type="image/webp" media="(min-width: 1200px)"
+                srcset="img/photo-1-desktop.webp 1x, img/photo-1-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/photo-1-tablet.webp 1x, img/photo-1-tablet@2x.webp 2x"> -->
+              <source type="image/webp" srcset="img/superman.webp 1x, img/superman@2x.webp 2x">
+
+              <img src="img/superman.jpg" srcset="img/superman@2x.jpg 2x" alt="Атлет в футболке Супермен." width="500"
+                height="524">
+              <!-- <source media="(max-width: 1365px)" srcset="img/superman.jpg 1x, img/photo-1-desktop@2x.jpg 2x"> -->
+              <!-- <source media="(max-width: 767px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x"> -->
+            </picture>
+          <!-- </div> -->
+        </div>
+      </div>
     </header>
-    <main>
+    <!-- <main>
       <section class="intro">
         <div class="container">
           <h1>Тестовая страница.</h1>
@@ -36,11 +70,11 @@
     </main>
     <footer>
       <div class="container"></div>
-    </footer>
+    </footer> -->
   </div>
 
   <!-- Модалки -->
-  <div class="modal modal--preload" data-modal="feedback">
+  <!-- <div class="modal modal--preload" data-modal="feedback">
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
       <div class="modal__content">
@@ -66,7 +100,7 @@
         </button>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>

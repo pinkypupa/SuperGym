@@ -1,0 +1,14 @@
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  a {
+    color: $color-default-white;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 26px;
+  }
+}
