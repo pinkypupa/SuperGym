@@ -1,0 +1,115 @@
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-list__item {
+  padding: 61px 60px;
+  text-align: center;
+  background-color: $color-default-white;
+  min-width: 360px;
+  border: 7px solid $color-default-white;
+  position: relative;
+  z-index: 10;
+
+  &--current {
+    border: 7px solid $color-crimson;
+    border-image: linear-gradient(135deg, $color-crimson 20%, #00359f 100%);
+    border-image-slice: 1;
+
+    button {
+      background: $outlining-red-to-right;
+      border-image: $outlining-red-to-right;
+      border-image-slice: 1;
+      color: $color-default-white;
+    }
+  }
+
+  &::before {
+    content: "0";
+    position: absolute;
+    z-index: -1;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    color: #e8e8e8;
+    opacity: 0.48;
+    top: 30%;
+    right: 22%;
+  }
+
+  &--coach {
+    &::before {
+      content: "5000";
+    }
+  }
+
+  &--daily {
+    &::before {
+      content: "1700";
+    }
+  }
+
+  &--full {
+    &::before {
+      content: "2700";
+    }
+  }
+}
+
+.card-list__title {
+  font-size: 26px;
+  line-height: 26px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.card-list__subtitle {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 62px;
+}
+
+.card-list__price {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-bottom: 35px;
+  justify-content: center;
+}
+
+.card-list__value {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 150%;
+  color: $color-egyptian-blue;
+  margin: 0;
+  margin-right: 14px;
+}
+
+.card-list__rouble {
+  font-family: $ff-rouble;
+  color: $color-sapphire;
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 150%
+}
+
+.card-list__button {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: $color-sapphire;
+  border: 2px solid $color-sapphire;
+  padding: 25px 44px;
+  background-color: $color-default-white;
+}
