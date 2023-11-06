@@ -2,41 +2,46 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: size(30px);
+  padding-bottom: size(30px);
+
+  @include vp-1365 {
+    padding-bottom: size(28px);
+  }
 
   @include vp-767 {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: size(15px);
+    padding-bottom: size(16px);
   }
 
   a {
     color: $color-default-white;
-    font-size: 26px;
+    font-size: size(26px);
     font-weight: 700;
-    line-height: 26px;
-    letter-spacing: 1px;
+    line-height: size(26px);
+    letter-spacing: size(1px);
 
     @include vp-1365 {
-      font-size: 24px;
-      line-height: 26px;
+      font-size: size(24px);
+      line-height: size(26px);
     }
 
     @include vp-767 {
-      font-size: 22px;
-      line-height: 22px;
+      letter-spacing: size(0.9px);
+      font-size: size(22px);
+      line-height: size(22px);
     }
   }
 
   img {
     @include vp-1365 {
-      max-width: 111px;
-      max-height: 24px;
+      max-width: size(111px);
+      max-height: size(24px);
     }
 
     @include vp-767 {
-      max-width: 102px;
-      max-height: 22px;
+      max-width: size(102px);
+      max-height: size(22px);
     }
   }
 }

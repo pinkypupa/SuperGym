@@ -10,11 +10,13 @@
 
 @import "variables";
 @import "mixins";
+@import "functions.scss";
 @import "global/fonts";
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
 @import "global/sitemap.scss";
+
 
 // Blocks
 // ---------------------------------
@@ -31,6 +33,9 @@
 @import "blocks/about.scss";
 @import "blocks/subscription.scss";
 @import "blocks/card-list.scss";
+@import "blocks/news.scss";
+@import "blocks/announcement.scss";
+@import "blocks/competition.scss";
 @import "blocks/gym.scss";
 
 
