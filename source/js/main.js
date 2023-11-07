@@ -9,6 +9,20 @@ const playButton = document.getElementById('playButton');
 
 // ---------------------------------
 
+function playVideo() {
+  videoPlayer.remove();
+  playButton.remove();
+  const iframePlayer = document.createElement('iframe');
+  iframePlayer.setAttribute('src', 'https://www.youtube.com/embed/9TZXsZItgdw?si=twR-ewfRYAOdjvuk?&autoplay=1');
+  iframePlayer.setAttribute('title', 'YouTube video player');
+  iframePlayer.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+  iframePlayer.setAttribute('frameborder', '0');
+  iframePlayer.setAttribute('allowfullscreen', '');
+  iframePlayer.setAttribute('width', '364');
+  iframePlayer.setAttribute('height', '228');
+  videoWrapper.append(iframePlayer);
+}
+
 window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
@@ -19,18 +33,12 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
 
-  videoWrapper.addEventListener('click', () => {
-    videoPlayer.remove();
-    playButton.remove();
-    const iframePlayer = document.createElement('iframe');
-    iframePlayer.setAttribute('src', 'https://www.youtube.com/embed/9TZXsZItgdw?si=twR-ewfRYAOdjvuk?&autoplay=1');
-    iframePlayer.setAttribute('title', 'YouTube video player');
-    iframePlayer.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
-    iframePlayer.setAttribute('frameborder', '0');
-    iframePlayer.setAttribute('allowfullscreen', '');
-    iframePlayer.setAttribute('width', '364');
-    iframePlayer.setAttribute('height', '228');
-    videoWrapper.append(iframePlayer);
+  videoPlayer.addEventListener('click', () => {
+    playVideo();
+  });
+
+  playButton.addEventListener('click', () => {
+    playVideo();
   });
 
 

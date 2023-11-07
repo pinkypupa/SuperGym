@@ -64,6 +64,7 @@
   @include vp-1365 {
     padding-bottom: unset;
   }
+
   @include vp-767 {
     padding-bottom: size(10px);
   }
@@ -84,5 +85,23 @@
 
   @include vp-1365 {
     padding: size(20px);
+  }
+}
+
+.news__image {
+
+  img {
+    width: size(660px);
+    height: size(500px);
+
+    @include vp-1365 {
+      min-width: size(386px);
+      height: size(324px);
+    }
+
+    @include vp-767 {
+      min-width: size(290px);
+      height: size(292px);
+    }
   }
 }
