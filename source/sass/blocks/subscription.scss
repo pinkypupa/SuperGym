@@ -3,8 +3,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 9%;
-  padding-bottom: 9%;
+  padding-top: size(125px);
+  padding-bottom: size(120px);
 
   @include vp-1365 {
     padding-top: size(100px);
@@ -24,7 +24,7 @@
   line-height: size(54px);
   letter-spacing: size(2px);
   margin: 0;
-  margin-bottom: size(20px);
+  margin-bottom: size(17px);
 
   @include vp-1365 {
     font-size: size(42px);
@@ -36,7 +36,7 @@
   @include vp-767 {
     font-size: size(32px);
     line-height: size(32px);
-    letter-spacing: size(0.96px);
+    letter-spacing: size(1.1px);
     margin-bottom: size(5px);
   }
 }
@@ -47,14 +47,13 @@
   flex-direction: row;
   gap: size(50px);
   padding: 0;
-  border-bottom: size(2px) solid rgba(120, 120, 120, 0.20);
+  border-bottom: size(2px) solid rgba(120, 120, 120, 0.2);
   margin-bottom: size(37px);
 
   @include vp-1365 {
     gap: size(54px);
     margin-bottom: size(45px);
   }
-
 
   @include vp-767 {
     gap: size(45px);
@@ -77,7 +76,7 @@
       content: "";
       position: absolute;
       background-color: $color-crimson;
-      width: -webkit-fill-available;
+      width: fill-available;
       height: size(2px);
       top: 99%;
       left: 0;
@@ -93,20 +92,30 @@
   @include vp-767 {
     font-size: size(16px);
     line-height: size(16px);
-    padding-bottom: size(17px);
+    padding-bottom: size(16px);
   }
 }
 
 .subscription__image {
   position: absolute;
-  bottom: size(445px);
-  right: size(-170px);
+  bottom: 51%;
+  right: -12%;
+  transform: translateY(size(-14px));
+
+  img {
+    min-width: size(450px);
+
+    @include vp-1365 {
+      min-width: unset;
+      width: size(380px);
+    }
+  }
 
   @include vp-1365 {
-    bottom: size(483px);
-    right: size(-60px);
-    width: size(385px);
-    height: size(393px);
+    bottom: 44%;
+    right: -7%;
+    min-width: size(380px);
+    transform: translateY(size(-26px));
   }
 
   @include vp-767 {

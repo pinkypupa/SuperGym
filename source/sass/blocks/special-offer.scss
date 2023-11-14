@@ -153,7 +153,6 @@
 }
 
 .special-offer__image {
-
   img {
     width: size(280px);
     max-height: size(462px);
@@ -197,7 +196,6 @@
     border-image-slice: 1;
 
     @include vp-1365 {
-      flex-grow: unset;
       flex: 1;
       min-height: size(211px);
     }
@@ -206,6 +204,7 @@
       padding: size(38px);
       padding-bottom: size(33px);
       align-items: center;
+      flex-grow: unset;
     }
   }
 

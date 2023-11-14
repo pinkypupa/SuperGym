@@ -1,0 +1,147 @@
+.jury__title {
+  margin: 0;
+  font-family: $ff-alumni;
+  font-size: size(54px);
+  font-weight: 600;
+  line-height: size(54px);
+  letter-spacing: size(3px);
+
+  @include vp-1365 {
+    font-size: size(42px);
+    line-height: size(42px);
+    letter-spacing: size(2px);
+    text-align: center;
+  }
+
+  @include vp-767 {
+    font-size: size(32px);
+    line-height: size(32px);
+    letter-spacing: size(0.96px);
+  }
+}
+
+.jury__slider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: size(45px) 0 size(120px) 0;
+  overflow-x: hidden;
+
+  @include vp-1365 {
+    margin: 0 size(55px);
+    padding: size(40px) 0 size(100px) 0;
+  }
+
+  @include vp-767 {
+    margin: 0 size(32px);
+    padding: size(42px) 0 size(70px) 0;
+  }
+
+  // @include vp-1365 {
+  //   padding: 0 55px;
+  // }
+}
+
+.jury__main-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+
+  // @include vp-1365 {
+  //   max-width: 644px;
+  // }
+}
+
+.jury__slide {
+  // тут поменять - не нравится макс уидв
+  // max-width: size(260px);
+  min-width: size(260px);
+  position: relative;
+
+  @include vp-1365 {
+    max-width: size(268px);
+    height: size(294px);
+  }
+
+  @include vp-767 {
+    min-width: size(226px);
+    height: size(274px);
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+  }
+}
+
+.jury__name {
+  position: absolute;
+  color: $color-default-white;
+  bottom: size(24px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: size(22px);
+  font-weight: 400;
+  line-height: size(22px);
+  width: max-content;
+
+  @include vp-1365 {
+    letter-spacing: size(0.1px);
+  }
+}
+
+.jury__button {
+  position: absolute;
+  width: size(56px);
+  height: size(56px);
+  // border: size(1px) solid $color-sapphire;
+  border: size(1px) solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--previous {
+    left: size(26px);
+
+    @include vp-1365 {
+      left: size(25px);
+    }
+
+    @include vp-767 {
+      left: size(-5px);
+    }
+  }
+
+  &--next {
+    right: size(26px);
+
+    @include vp-1365 {
+      right: size(25px);
+    }
+
+    @include vp-767 {
+      right: size(-5px);
+    }
+  }
+
+  img {
+    min-width: size(18px);
+    min-height: size(34px);
+
+    @include vp-767 {
+      min-width: unset;
+      min-height: unset;
+      width: size(10px);
+      height: size(19px);
+    }
+  }
+}

@@ -10,7 +10,7 @@
   @include vp-1365 {
     flex-direction: column;
     align-items: center;
-    gap: size(41px);
+    gap: size(40px);
   }
 
   @include vp-767 {
@@ -75,7 +75,7 @@
 
   @include vp-1365 {
     min-width: size(440px);
-    padding: size(59px);
+    padding: size(58px);
 
     &::before {
       top: size(143px);
@@ -86,7 +86,7 @@
   @include vp-767 {
     min-width: unset;
     max-width: unset;
-    padding: size(44px) size(20px);
+    padding: size(45px) size(20px) size(43px);
     width: 100%;
 
     &::before {
@@ -102,7 +102,7 @@
   font-size: size(26px);
   line-height: size(26px);
   margin: 0;
-  margin-bottom: size(5px);
+  margin-bottom: size(8px);
 
   @include vp-1365 {
     font-size: size(24px);
@@ -131,7 +131,7 @@
   @include vp-767 {
     font-size: size(14px);
     line-height: size(22px);
-    margin-bottom: size(60px);
+    margin-bottom: size(57px);
   }
 }
 
@@ -139,11 +139,15 @@
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  margin-bottom: size(35px);
+  margin-bottom: size(32px);
   justify-content: center;
 
   @include vp-1365 {
-    margin-bottom: size(22px);
+    margin-bottom: size(25px);
+  }
+
+  @include vp-767 {
+    margin-bottom: size(23px);
   }
 }
 
@@ -184,18 +188,16 @@
   justify-content: center;
   color: $color-sapphire;
   border: size(2px) solid $color-sapphire;
-  padding: size(25px) size(44px);
+  padding: size(25px) size(43px);
   background-color: $color-default-white;
 
   @include vp-1365 {
-    font-weight: 400;
     // может тут тоже уменьшить паддинг боковой для переполнения? и наверху в десктопе
     padding: size(20px) size(42px);
   }
 
   @include vp-767 {
-    font-weight: 700;
-    padding: size(19px);
+    padding: size(20px);
     width: 100%;
     max-width: size(205px);
   }

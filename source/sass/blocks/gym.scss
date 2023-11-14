@@ -5,7 +5,6 @@
 
   @include vp-1365 {
     padding-top: size(100px);
-
   }
 
   @include vp-767 {
@@ -59,14 +58,14 @@
     @include vp-1365 {
       font-size: size(42px);
       line-height: size(42px);
-      letter-spacing: size(1.26px);
+      letter-spacing: size(1.69px);
       margin-bottom: size(18px);
     }
 
     @include vp-767 {
       font-size: size(32px);
       line-height: size(32px);
-      letter-spacing: size(1.4px);
+      letter-spacing: size(1px);
       margin-bottom: size(13px);
     }
   }
@@ -105,7 +104,7 @@
 
   p {
     margin: 0;
-    letter-spacing: size(-0.155px);
+    letter-spacing: size(-0.15px);
 
     &:first-child {
       margin-bottom: 2%;
@@ -128,6 +127,7 @@
     @include vp-767 {
       font-size: size(14px);
       line-height: size(22px);
+      letter-spacing: size(-0.14px);
     }
   }
 }
@@ -137,6 +137,7 @@
     height: 100%;
     min-width: size(660px);
     min-height: size(400px);
+    padding: size(5px) 0;
 
     @include vp-1365 {
       width: 100%;
@@ -154,7 +155,7 @@
   position: absolute;
   min-height: size(228px);
   min-width: size(364px);
-  top: 79%;
+  top: 78%;
   left: 50%;
   transform: translateX(-39%);
 
@@ -213,30 +214,30 @@
       width: 100%;
     }
   }
-}
 
-div {
-  min-height: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-button {
-  padding: 0;
-  background: none;
-  border: none;
-  cursor: pointer;
-
-  @include vp-1365 {
-    max-width: size(72px);
+  div {
+    min-height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-}
 
-img {
-  min-width: size(100px);
+  button {
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
 
-  @include vp-1365 {
-    min-width: size(72px);
+    @include vp-1365 {
+      max-width: size(72px);
+    }
+  }
+
+  img {
+    min-width: size(100px);
+
+    @include vp-1365 {
+      min-width: size(72px);
+    }
   }
 }

@@ -1,6 +1,7 @@
-import { iosVhFix } from './utils/ios-vh-fix';
-import { initModals } from './modules/modals/init-modals';
-import { Form } from './modules/form-validate/form';
+import {iosVhFix} from './utils/ios-vh-fix';
+// import {initModals} from './modules/modals/init-modals';
+// import {Form} from './modules/form-validate/form';
+import {swiper} from './jury-swiper';
 
 // пока сделаем через ид, потом надо через дата-атрибуты как-то
 const videoWrapper = document.querySelector('.gym__video');
@@ -14,7 +15,7 @@ function playVideo() {
   playButton.remove();
   const iframePlayer = document.createElement('iframe');
   iframePlayer.setAttribute('src', 'https://www.youtube.com/embed/9TZXsZItgdw?si=twR-ewfRYAOdjvuk?&autoplay=1');
-  iframePlayer.setAttribute('title', 'YouTube video player');
+  iframePlayer.setAttribute('title', 'videoPlayer');
   iframePlayer.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
   iframePlayer.setAttribute('frameborder', '0');
   iframePlayer.setAttribute('allowfullscreen', '');
@@ -40,6 +41,8 @@ window.addEventListener('DOMContentLoaded', () => {
   playButton.addEventListener('click', () => {
     playVideo();
   });
+
+  swiper.slideNext();
 
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
