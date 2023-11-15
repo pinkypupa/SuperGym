@@ -43,9 +43,13 @@
           </div>
           <div class="hero__image">
             <picture>
-              <source type="image/webp" srcset="img/superman.webp 1x, img/superman@2x.webp 2x">
-              <img src="img/superman.jpg" srcset="img/superman@2x.jpg 2x" alt="Атлет в футболке Супермен." width="500"
-                height="524">
+              <source type="image/webp" srcset="img/superman-desktop.webp 1x, img/superman-desktop@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1365px)"
+                srcset="img/superman-tablet.webp 1x, img/superman-tablet@2x.webp 2x">
+
+              <img src="img/superman-desktop.jpg" srcset="img/superman-desktop@2x.jpg 2x"
+                alt="Атлет в футболке Супермен." width="500" height="524">
+              <source media="(max-width: 1365px)" srcset="img/superman-tablet.jpg 1x, img/superman-tablet@2x.jpg 2x">
             </picture>
           </div>
         </div>
@@ -60,7 +64,8 @@
               <h1>Тренажерный зал</h1>
               <span>Просторный зал площадью 900 кв/м</span>
               <div class="gym__text-wrapper">
-                <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и&nbspздоровья.
+                <p>Supergym — самый большой фитнес центр за Уралом и&nbspидеальное место для укрепления тела
+                  и&nbspздоровья.
                   Тренажерный зал оснащен всем необходимым современным оборудованием для&nbspвсех спортсменов.
                 </p>
                 <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре
@@ -132,7 +137,7 @@
             </li>
           </ul>
         </div>
-        <!-- переделать под вебп и пикчер и вопрос к классу  -->
+        <!-- переделать под вебп и пикчер  -->
         <div class="subscription__image">
           <img src="img/weight-plates.png" width="450" height="492" alt="">
         </div>

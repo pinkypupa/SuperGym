@@ -8,7 +8,7 @@
 
   @include vp-1365 {
     padding-top: size(100px);
-    padding-bottom: size(100px);
+    padding-bottom: size(102px);
   }
 
   @include vp-767 {
@@ -22,22 +22,22 @@
   font-size: size(54px);
   font-weight: 600;
   line-height: size(54px);
-  letter-spacing: size(2px);
+  letter-spacing: size(1.62px);
   margin: 0;
-  margin-bottom: size(17px);
+  margin-bottom: size(34px);
 
   @include vp-1365 {
     font-size: size(42px);
     line-height: size(42px);
-    letter-spacing: size(1.7px);
-    margin-bottom: size(20px);
+    letter-spacing: size(1.26px);
+    margin-bottom: size(37px);
   }
 
   @include vp-767 {
     font-size: size(32px);
     line-height: size(32px);
-    letter-spacing: size(1.1px);
-    margin-bottom: size(5px);
+    letter-spacing: size(0.96px);
+    margin-bottom: size(22px);
   }
 }
 
@@ -48,7 +48,7 @@
   gap: size(50px);
   padding: 0;
   border-bottom: size(2px) solid rgba(120, 120, 120, 0.2);
-  margin-bottom: size(37px);
+  margin: 0 0 size(36px);
 
   @include vp-1365 {
     gap: size(54px);
@@ -66,7 +66,7 @@
   font-weight: 400;
   line-height: size(20px);
   color: #848fa8;
-  padding-bottom: size(12px);
+  padding-bottom: size(11px);
   position: relative;
 
   &--current {
@@ -87,12 +87,13 @@
   @include vp-1365 {
     font-size: size(18px);
     line-height: size(18px);
+    padding-bottom: size(12px);
   }
 
   @include vp-767 {
     font-size: size(16px);
     line-height: size(16px);
-    padding-bottom: size(16px);
+    padding-bottom: size(15px);
   }
 }
 

@@ -6,7 +6,8 @@
   padding-bottom: size(30px);
 
   @include vp-1365 {
-    padding-top: size(28px);
+    padding-top: size(29px);
+    padding-bottom: size(29px);
   }
 
   @include vp-767 {
@@ -19,7 +20,10 @@
     font-size: size(26px);
     font-weight: 700;
     line-height: size(26px);
-    letter-spacing: size(1px);
+
+    @include hover-focus {
+      color: #1c3374;
+    }
 
     @include vp-1365 {
       font-size: size(24px);
@@ -27,7 +31,6 @@
     }
 
     @include vp-767 {
-      letter-spacing: size(0.9px);
       font-size: size(22px);
       line-height: size(22px);
     }
@@ -39,7 +42,7 @@
     @include vp-1365 {
       min-width: unset;
       width: size(111px);
-      // max-height: size(24px);
+      max-height: size(24px);
     }
 
     @include vp-767 {

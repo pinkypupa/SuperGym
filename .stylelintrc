@@ -19,7 +19,7 @@
       }
     ],
     "max-nesting-depth": [
-      4,
+      2,
       {
         "ignoreAtRules": [
           "media",

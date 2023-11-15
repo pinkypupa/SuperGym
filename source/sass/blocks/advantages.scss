@@ -10,7 +10,7 @@
 
   @include vp-767 {
     padding-top: size(70px);
-    padding-bottom: size(70px);
+    padding-bottom: size(48px);
   }
 
   h1 {
@@ -19,20 +19,20 @@
     font-size: size(54px);
     font-weight: 600;
     line-height: size(54px);
-    letter-spacing: size(2px);
+    letter-spacing: size(1.62px);
     text-align: center;
     margin: 0 0 size(50px);
 
     @include vp-1365 {
       font-size: size(42px);
       line-height: size(42px);
-      letter-spacing: size(1.8px);
+      letter-spacing: size(1.26px);
     }
 
     @include vp-767 {
       font-size: size(32px);
       line-height: size(32px);
-      letter-spacing: size(1px);
+      letter-spacing: size(0.96px);
       margin: 0 0 size(55px);
     }
   }
@@ -88,7 +88,7 @@
 
     @include vp-767 {
       font-size: size(18px);
-      margin: 0 0 size(12px);
+      margin: 0 0 size(13px);
     }
   }
 
@@ -96,12 +96,11 @@
     margin: 0;
     font-size: size(16px);
     font-weight: 300;
-    letter-spacing: size(-0.2px);
 
     @include vp-767 {
       font-size: size(14px);
       line-height: size(22px);
-      margin: 0 size(10px);
+      margin: 0 size(8px);
     }
   }
 
@@ -112,16 +111,17 @@
     color: transparent;
     background-clip: text;
     background-image: linear-gradient(142deg, $color-crimson 0%, #0041ca 88%);
+    user-select: none;
 
     @include vp-1365 {
-      letter-spacing: size(1px);
+      // letter-spacing: size(1px);
     }
 
     @include vp-767 {
       font-size: size(64px);
       line-height: size(64px);
       width: fit-content;
-      margin-left: size(3px);
+      // margin-left: size(3px);
     }
   }
 
@@ -131,6 +131,11 @@
     font-weight: 400;
     line-height: size(22px);
     color: #2e35ac;
+    user-select: none;
+
+    // @include vp-1365 {
+    //   margin-top: 1px;
+    // }
 
     @include vp-767 {
       line-height: size(20px);
@@ -142,7 +147,7 @@
   max-width: size(340px);
   display: flex;
   flex-direction: row-reverse;
-  gap: size(33px);
+  gap: size(30px);
   justify-content: flex-end;
 
   @include vp-1365 {
@@ -185,12 +190,12 @@
       max-width: unset;
       width: 100%;
       padding: size(30px) size(35px) size(40px);
-      gap: size(20px);
-      margin: 0 0 size(5px);
+      gap: size(18px);
+      margin: size(4px) 0;
     }
 
     span {
-      margin: size(5px) 0 size(12px) 0;
+      margin: 0 0 size(12px) 0;
       color: $color-default-white;
 
       @include vp-1365 {
@@ -198,7 +203,7 @@
       }
 
       @include vp-767 {
-        margin: 0 size(7px) size(5px);
+        margin: 0 size(8px) size(6px);
       }
     }
 
@@ -234,6 +239,8 @@
         font-weight: 300;
         line-height: size(22px);
         margin: 0 size(30px);
+        letter-spacing: size(0.2px);
+        padding-top: size(2px);
       }
     }
   }
@@ -245,16 +252,17 @@
       background-image: $additional-red-to-right;
     }
 
+    h2 {
+      @include vp-767 {
+        margin: 0 0 size(12px);
+      }
+    }
+
     h3 {
       @include vp-767 {
         margin: 0 size(33px);
+        // padding-left: size(3px);
       }
-    }
-  }
-
-  &:last-child {
-    @include vp-767 {
-      margin-top: size(-7px);
     }
   }
 }
