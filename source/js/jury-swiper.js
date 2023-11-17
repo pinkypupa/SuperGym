@@ -1,14 +1,11 @@
-/* eslint-disable no-undef */
 import './vendor/swiper';
 
-// здесь решить проблему того, что свайпер подчёркивается
-const swiper = new Swiper('.jury__slider', {
+const swiper = new window.Swiper('.jury__slider', {
   slidesPerGroup: 1,
   loop: true,
   speed: 300,
+  initialSlide: 0,
 
-
-  // // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',

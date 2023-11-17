@@ -220,21 +220,66 @@
   }
 
   button {
+    position: absolute;
     padding: 0;
-    background: none;
-    border: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: size(72px);
+    height: size(72px);
+    border-radius: 50%;
+    background: $outlining-red-to-right;
+    border: 0;
+    outline: size(2px) solid rgba(245, 199, 212, 0.2);
+    outline-offset: size(12px);
+    z-index: 1;
     cursor: pointer;
+    transition: 0.5s;
 
     @include vp-1365 {
-      max-width: size(72px);
+      width: size(52px);
+      height: size(52px);
+      outline-offset: size(8px);
+    }
+
+    @include hover-focus {
+      background: $color-default-white;
+      outline-color: $color-sapphire;
+
+      span {
+        border-left-color: $color-sapphire;
+      }
+    }
+
+    @include active {
+      background: $color-default-white;
+      outline-color: $color-sapphire;
+
+      span {
+        border-left-color: $color-sapphire;
+      }
+    }
+
+    @include disabled {
+      background: $color-default-white;
+      outline-color: $color-sapphire;
+      opacity: 0.2;
+
+      span {
+        border-left-color: $color-sapphire;
+        opacity: 0.2;
+      }
     }
   }
 
-  img {
-    min-width: size(100px);
-
-    @include vp-1365 {
-      min-width: size(72px);
-    }
+  span {
+    position: absolute;
+    top: 50%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    border-top: size(8px) solid transparent;
+    border-left: size(13px) solid $color-default-white;
+    border-bottom: size(8px) solid transparent;
+    display: inline-block;
   }
 }

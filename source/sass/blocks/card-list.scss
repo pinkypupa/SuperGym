@@ -26,18 +26,12 @@
   border: size(7px) solid $color-default-white;
   position: relative;
   z-index: 10;
+  transition: 0.4s;
 
   &--current {
     border: size(7px) solid $color-crimson;
     border-image: linear-gradient(135deg, $color-crimson 20%, #00359f 100%);
     border-image-slice: 1;
-
-    button {
-      background: $outlining-red-to-right;
-      border-image: $outlining-red-to-right;
-      border-image-slice: 1;
-      color: $color-default-white;
-    }
   }
 
   &::before {
@@ -71,6 +65,12 @@
     &::before {
       content: "2700";
     }
+  }
+
+  @include hover-focus {
+    border: size(7px) solid $color-crimson;
+    border-image: linear-gradient(135deg, $color-crimson 20%, #00359f 100%);
+    border-image-slice: 1;
   }
 
   @include vp-1365 {
@@ -192,6 +192,25 @@
   padding: size(25px) size(43px);
   background-color: $color-default-white;
   user-select: none;
+  transition: 0.4s;
+
+  @include hover-focus {
+    background: $outlining-red-to-right;
+    border-image: $outlining-red-to-right;
+    border-image-slice: 1;
+    color: $color-default-white;
+  }
+
+  @include active {
+    background: $outlining-red-to-right;
+    border-image: $outlining-red-to-right;
+    border-image-slice: 1;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  @include disabled {
+    opacity: 0.3;
+  }
 
   @include vp-1365 {
     // может тут тоже уменьшить паддинг боковой для переполнения? и наверху в десктопе
@@ -202,5 +221,32 @@
     padding: size(20px);
     width: 100%;
     max-width: size(205px);
+  }
+
+  &--current {
+    background: $outlining-red-to-right;
+    border-image: $outlining-red-to-right;
+    border-image-slice: 1;
+    color: $color-default-white;
+
+    @include hover-focus {
+      background: none;
+      border-image: unset;
+      border-color: $color-sapphire;
+      background-color: $color-default-white;
+      color: $color-egyptian-blue;
+    }
+
+    @include active {
+      background: none;
+      border-image: unset;
+      border-color: $color-sapphire;
+      background-color: $color-default-white;
+      color: $color-sapphire;
+    }
+
+    @include disabled {
+      opacity: 0.5;
+    }
   }
 }

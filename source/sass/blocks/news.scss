@@ -77,6 +77,7 @@
   font-weight: 700;
   line-height: size(12px);
   letter-spacing: size(0.6px);
+  color: $color-default-white;
   text-transform: uppercase;
   background-color: unset;
   border: size(2px) solid $color-default-white;
@@ -85,6 +86,21 @@
   height: fit-content;
   justify-content: center;
   user-select: none;
+  transition: 0.4s;
+
+  @include hover-focus {
+    background-color: $color-default-white;
+    color: $color-egyptian-blue;
+  }
+
+  @include active {
+    background-color: $color-default-white;
+    color: $color-sapphire;
+  }
+
+  @include disabled {
+    opacity: 0.5;
+  }
 
   @include vp-1365 {
     padding: size(20px);

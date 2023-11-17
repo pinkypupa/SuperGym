@@ -1,0 +1,92 @@
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  column-gap: size(30px);
+  row-gap: size(27px);
+  max-width: size(410px);
+
+  @include vp-1365 {
+    max-width: size(502px);
+    margin: 0 auto;
+    column-gap: size(58px);
+    row-gap: size(29px);
+  }
+
+  @include vp-767 {
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(3, auto);
+    column-gap: unset;
+    row-gap: size(31px);
+  }
+}
+
+.form__label {
+  height: min-content;
+}
+
+.form__input {
+  padding: size(10px) 0 size(6px);
+  border: size(1px) solid transparent;
+  border-bottom-color: #74819c;
+  background-color: transparent;
+  width: 100%;
+  font-size: size(14px);
+  line-height: size(22px);
+  color: $color-default-white;
+
+  &::placeholder {
+    color: $color-default-white;
+    font-size: size(14px);
+    line-height: size(22px);
+  }
+
+  @include vp-1365 {
+    font-size: size(16px);
+    line-height: size(24px);
+    font-weight: 300;
+    padding: size(4px) 0;
+
+    &::placeholder {
+      font-size: size(16px);
+      line-height: size(24px);
+      font-weight: 300;
+    }
+  }
+
+  @include vp-767 {
+    font-size: size(14px);
+    line-height: size(22px);
+    padding: size(3px) 0;
+
+    &::placeholder {
+      font-size: size(14px);
+      line-height: size(22px);
+    }
+
+    &--phone {
+      margin-bottom: size(9px);
+    }
+  }
+}
+
+.form__button {
+  grid-area: 2/1/3/3;
+  background-color: transparent;
+  padding: size(25px);
+  border: size(2px) solid $color-default-white;
+  font-size: size(12px);
+  font-weight: 700;
+  line-height: size(12px);
+  letter-spacing: size(0.6px);
+  text-transform: uppercase;
+  color: $color-default-white;
+
+  @include vp-1365 {
+    padding: size(20px);
+  }
+
+  @include vp-767 {
+    grid-area: 3/1/4/2;
+  }
+}

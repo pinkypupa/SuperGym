@@ -1,0 +1,36 @@
+.social-media {
+  padding: 0;
+  gap: size(10px);
+
+  @include vp-767 {
+    margin-bottom: 0;
+    justify-content: center;
+  }
+}
+
+.social-media__item {
+  width: size(25px);
+  height: size(25px);
+  border-radius: 50%;
+  background-color: $color-default-white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media__logo {
+  width: size(25px);
+  height: size(25px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: size(1px);
+
+  &--vk {
+    transform: translateX(-4%);
+  }
+
+  svg {
+    fill: $color-black-russian;
+  }
+}

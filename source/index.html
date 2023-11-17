@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Проект сайта для спортивного зала SuperGym" />
   <title>SuperGym</title>
-  <link rel="stylesheet" href="" />
   <link rel="stylesheet" href="css/style.min.css" />
   <!-- Подключаем фавиконки -->
   <link rel="icon" href="favicon.ico" />
@@ -39,17 +38,17 @@
               <li>Групповые занятия</li>
               <li>Кардио-зона</li>
             </ul>
-            <a href="#">Купить абонемент</a>
+            <a href="#subscription">Купить абонемент</a>
           </div>
           <div class="hero__image">
             <picture>
               <source type="image/webp" srcset="img/superman-desktop.webp 1x, img/superman-desktop@2x.webp 2x">
               <source type="image/webp" media="(max-width: 1365px)"
                 srcset="img/superman-tablet.webp 1x, img/superman-tablet@2x.webp 2x">
-
+              <source type="image/jpeg" media="(max-width: 1365px)"
+                srcset="img/superman-tablet.jpg 1x, img/superman-tablet@2x.jpg 2x">
               <img src="img/superman-desktop.jpg" srcset="img/superman-desktop@2x.jpg 2x"
                 alt="Атлет в футболке Супермен." width="500" height="524">
-              <source media="(max-width: 1365px)" srcset="img/superman-tablet.jpg 1x, img/superman-tablet@2x.jpg 2x">
             </picture>
           </div>
         </div>
@@ -64,9 +63,9 @@
               <h1>Тренажерный зал</h1>
               <span>Просторный зал площадью 900 кв/м</span>
               <div class="gym__text-wrapper">
-                <p>Supergym — самый большой фитнес центр за Уралом и&nbspидеальное место для укрепления тела
-                  и&nbspздоровья.
-                  Тренажерный зал оснащен всем необходимым современным оборудованием для&nbspвсех спортсменов.
+                <p>Supergym — самый большой фитнес центр за Уралом и&nbsp;идеальное место для укрепления тела
+                  и&nbsp;здоровья.
+                  Тренажерный зал оснащен всем необходимым современным оборудованием для&nbsp;всех спортсменов.
                 </p>
                 <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре
                   есть
@@ -80,32 +79,34 @@
                 <source type="image/webp" media="(max-width: 1365px)"
                   srcset="img/gym/gym-tablet.webp 1x, img/gym/gym-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/gym/gym-desktop.webp 1x, img/gym/gym-desktop@2x.webp 2x">
-
+                <source type="image/jpeg" media="(max-width: 1365px)"
+                  srcset="img/gym/gym-tablet.jpg 1x, img/gym/gym-tablet@2x.jpg 2x">
+                <source type="image/jpeg" media="(max-width: 767px)"
+                  srcset="img/gym/gym-mobile.jpg 1x, img/gym/gym-mobile@2x.jpg 2x">
                 <img src="img/gym/gym-desktop.jpg" srcset="img/gym/gym-desktop@2x.jpg 2x"
                   alt="Спортивный зал с оборудованием." width="660" height="401">
-                <source media="(max-width: 1365px)" srcset="img/gym/gym-tablet.jpg 1x, img/gym/gym-tablet@2x.jpg 2x">
-                <source media="(max-width: 767px)" srcset="img/gym/gym-mobile.jpg 1x, img/gym/gym-mobile@2x.jpg 2x">
               </picture>
             </div>
           </div>
           <div class="gym__video">
-            <video id="videoPoster" width="364" height="228" poster="img/video.jpg"></video>
+            <video id="video-poster" width="364" height="228" poster="img/video.jpg"></video>
             <div>
-              <button id="playButton" type="button" title="playButton">
-                <img src="img/svg/video-control-desktop.svg" width="100" height="100" alt="">
+              <button id="play-button" type="button" title="playButton" aria-label="Воспроизвести видео">
+                <span></span>
               </button>
             </div>
           </div>
         </div>
       </section>
-      <!-- конец секции - поправить относительное позиционирование картинки и кнопки -->
+
       <section class="subscription" data-test="price">
+        <a id="subscription" href="#" aria-label="Секция Абонементы (якорная ссылка)"></a>
         <div class="subscription__wrapper container">
           <h1 class="subscription__header">Абонементы</h1>
           <ul class="subscription__list">
-            <li class="subscription__item subscription__item--current">1 месяц</li>
-            <li class="subscription__item">6 месяцев</li>
-            <li class="subscription__item">12 месяцев</li>
+            <li class="subscription__item subscription__item--current" data-month="one-month">1 месяц</li>
+            <li class="subscription__item" data-month="six-months">6 месяцев</li>
+            <li class="subscription__item" data-month="twelve-months">12 месяцев</li>
           </ul>
           <ul class="subscription__cards card-list">
             <li class="card-list__item card-list__item--coach">
@@ -115,7 +116,7 @@
                 <p class="card-list__value">5000</p>
                 <span class="card-list__rouble">₽</span>
               </div>
-              <button class="card-list__button btn" type="button">Купить абонемент</button>
+              <button class="card-list__button" type="button">Купить абонемент</button>
             </li>
             <li class="card-list__item card-list__item--daily card-list__item--current">
               <h2 class="card-list__title">Дневной</h2>
@@ -124,7 +125,7 @@
                 <p class="card-list__value">1700</p>
                 <span class="card-list__rouble">₽</span>
               </div>
-              <button class="card-list__button btn" type="button">Купить абонемент</button>
+              <button class="card-list__button card-list__button--current" type="button">Купить абонемент</button>
             </li>
             <li class="card-list__item card-list__item--full">
               <h2 class="card-list__title">Полный день</h2>
@@ -133,13 +134,15 @@
                 <p class="card-list__value">2700</p>
                 <span class="card-list__rouble">₽</span>
               </div>
-              <button class="card-list__button btn" type="button">Купить абонемент</button>
+              <button class="card-list__button" type="button">Купить абонемент</button>
             </li>
           </ul>
         </div>
-        <!-- переделать под вебп и пикчер  -->
         <div class="subscription__image">
-          <img src="img/weight-plates.png" width="450" height="492" alt="">
+          <picture>
+            <source type="image/webp" srcset="img/weight-plates.webp">
+            <img src="img/weight-plates.png" width="450" height="492" alt="">
+          </picture>
         </div>
       </section>
 
@@ -150,7 +153,7 @@
             <div class="news__message">
               <h2 class="news__title">Super Games</h2>
               <p class="news__subtitle">
-                Ежегодные соревнования по&nbspCrossFit
+                Ежегодные соревнования по&nbsp;CrossFit
               </p>
               <div class="news__details competition">
                 <h2 class="competition__title">Дата</h2>
@@ -163,7 +166,7 @@
                 </h2>
                 <span class="competition__info competition__info--time">12:00</span>
               </div>
-              <button class="news__fill-button btn" type="button">
+              <button class="news__fill-button" type="button">
                 Заполнить заявку
               </button>
             </div>
@@ -181,18 +184,17 @@
                       img/competition/competition-desktop.webp    1x,
                       img/competition/competition-desktop@2x.webp 2x
                     " />
-
+                <source type="image/jpeg" media="(max-width: 1365px)" srcset="
+                    img/competition/competition-tablet.jpg    1x,
+                    img/competition/competition-tablet@2x.jpg 2x
+                  " />
+                <source type="image/jpeg" media="(max-width: 767px)" srcset="
+                    img/competition/competition-mobile.jpg    1x,
+                    img/competition/competition-mobile@2x.jpg 2x
+                  " />
                 <img src="img/competition/competition-desktop.jpg"
                   srcset="img/competition/competition-desktop@2x.jpg 2x" alt="Кроссфит-спортсмен." width="660"
                   height="500" />
-                <source media="(max-width: 1365px)" srcset="
-                      img/competition/competition-tablet.jpg    1x,
-                      img/competition/competition-tablet@2x.jpg 2x
-                    " />
-                <source media="(max-width: 767px)" srcset="
-                      img/competition/competition-mobile.jpg    1x,
-                      img/competition/competition-mobile@2x.jpg 2x
-                    " />
               </picture>
             </div>
           </div>
@@ -202,7 +204,9 @@
           <div class="jury__slider swiper">
 
             <div class="jury__button jury__button--previous swiper-button-prev">
-              <img src="img/svg/jury-previous.svg" width="16" height="32" alt="" />
+              <svg width="16" height="32">
+                <use href="img/sprite.svg#jury-previous"></use>
+              </svg>
             </div>
 
             <div class="jury__main-wrapper swiper-wrapper">
@@ -221,19 +225,24 @@
                         img/jury/jury-Anna-desktop.webp    1x,
                         img/jury/jury-Anna-desktop@2x.webp 2x
                       " />
-
+                  <source type="image/jpeg" media="(max-width: 1365px)" srcset="
+                      img/jury/jury-Anna-tablet.jpg    1x,
+                      img/jury/jury-Anna-tablet@2x.jpg 2x
+                    " />
+                  <source type="image/jpeg" media="(max-width: 767px)" srcset="
+                      img/jury/jury-Anna-mobile.jpg    1x,
+                      img/jury/jury-Anna-mobile@2x.jpg 2x
+                    " />
                   <img src="img/jury/jury-Anna-desktop.jpg" srcset="img/jury/jury-Anna-desktop@2x.jpg 2x"
                     alt="Состав жюри - Анна." width="260" height="294" />
-                  <source media="(max-width: 1365px)" srcset="
-                        img/jury/jury-Anna-tablet.jpg    1x,
-                        img/jury/jury-Anna-tablet@2x.jpg 2x
-                      " />
-                  <source media="(max-width: 767px)" srcset="
-                        img/jury/jury-Anna-mobile.jpg    1x,
-                        img/jury/jury-Anna-mobile@2x.jpg 2x
-                      " />
                 </picture>
-                <span class="jury__name">Анна Павлова</span>
+                <button class="jury__name" type="button">Анна Павлова</button>
+                <p class="jury__sport">Тяжёлая атлетика</p>
+                <ul class="jury__details-list">
+                  <li class="jury__details-item">КМС по пауэрлифтингу</li>
+                  <li class="jury__details-item">Мастер спорта по тяжёлой атлетике</li>
+                  <li class="jury__details-item">Опыт — 12 лет</li>
+                </ul>
               </div>
               <div class="jury__slide swiper-slide">
                 <picture>
@@ -249,19 +258,24 @@
                         img/jury/jury-Aleksei-desktop.webp    1x,
                         img/jury/jury-Aleksei-desktop@2x.webp 2x
                       " />
-
+                  <source type="image/jpeg" media="(max-width: 1365px)" srcset="
+                      img/jury/jury-Aleksei-tablet.jpg    1x,
+                      img/jury/jury-Aleksei-tablet@2x.jpg 2x
+                    " />
+                  <source type="image/jpeg" media="(max-width: 767px)" srcset="
+                      img/jury/jury-Aleksei-mobile.jpg    1x,
+                      img/jury/jury-Aleksei-mobile@2x.jpg 2x
+                    " />
                   <img src="img/jury/jury-Aleksei-desktop.jpg" srcset="img/jury/jury-Aleksei-desktop@2x.jpg 2x"
                     alt="Состав жюри - Алексей." width="260" height="294" />
-                  <source media="(max-width: 1365px)" srcset="
-                        img/jury/jury-Aleksei-tablet.jpg    1x,
-                        img/jury/jury-Aleksei-tablet@2x.jpg 2x
-                      " />
-                  <source media="(max-width: 767px)" srcset="
-                        img/jury/jury-Aleksei-mobile.jpg    1x,
-                        img/jury/jury-Aleksei-mobile@2x.jpg 2x
-                      " />
                 </picture>
-                <span class="jury__name">Алексей Лавров</span>
+                <button class="jury__name" type="button">Алексей Лавров</button>
+                <p class="jury__sport">CrossFit</p>
+                <ul class="jury__details-list">
+                  <li class="jury__details-item">Certified Level 4 Trainer</li>
+                  <li class="jury__details-item">Призёр чемпионата России по CrossFit</li>
+                  <li class="jury__details-item">Опыт — 4 года</li>
+                </ul>
               </div>
               <div class="jury__slide swiper-slide">
                 <picture>
@@ -277,19 +291,24 @@
                         img/jury/jury-Alexander-desktop.webp    1x,
                         img/jury/jury-Alexander-desktop@2x.webp 2x
                       " />
-
+                  <source type="image/jpeg" media="(max-width: 1365px)" srcset="
+                      img/jury/jury-Alexander-tablet.jpg    1x,
+                      img/jury/jury-Alexander-tablet@2x.jpg 2x
+                    " />
+                  <source type="image/jpeg" media="(max-width: 767px)" srcset="
+                      img/jury/jury-Alexander-mobile.jpg    1x,
+                      img/jury/jury-Alexander-mobile@2x.jpg 2x
+                    " />
                   <img src="img/jury/jury-Alexander-desktop.jpg" srcset="img/jury/jury-Alexander-desktop@2x.jpg 2x"
                     alt="Состав жюри - Александр." width="260" height="294" />
-                  <source media="(max-width: 1365px)" srcset="
-                        img/jury/jury-Alexander-tablet.jpg    1x,
-                        img/jury/jury-Alexander-tablet@2x.jpg 2x
-                      " />
-                  <source media="(max-width: 767px)" srcset="
-                        img/jury/jury-Alexander-mobile.jpg    1x,
-                        img/jury/jury-Alexander-mobile@2x.jpg 2x
-                      " />
                 </picture>
-                <span class="jury__name">Александр Пашков</span>
+                <button class="jury__name" type="button">Александр Пашков</button>
+                <p class="jury__sport">CrossFit</p>
+                <ul class="jury__details-list">
+                  <li class="jury__details-item">Certified Level 3 Trainer</li>
+                  <li class="jury__details-item">Победитель чемпионата России по CrossFit</li>
+                  <li class="jury__details-item">Опыт — 6 лет</li>
+                </ul>
               </div>
               <div class="jury__slide swiper-slide">
                 <picture>
@@ -305,19 +324,24 @@
                         img/jury/jury-Mary-desktop.webp    1x,
                         img/jury/jury-Mary-desktop@2x.webp 2x
                       " />
-
+                  <source type="image/jpeg" media="(max-width: 1365px)" srcset="
+                      img/jury/jury-Mary-tablet.jpg    1x,
+                      img/jury/jury-Mary-tablet@2x.jpg 2x
+                    " />
+                  <source type="image/jpeg" media="(max-width: 767px)" srcset="
+                      img/jury/jury-Mary-mobile.jpg    1x,
+                      img/jury/jury-Mary-mobile@2x.jpg 2x
+                    " />
                   <img src="img/jury/jury-Mary-desktop.jpg" srcset="img/jury/jury-Mary-desktop@2x.jpg 2x"
                     alt="Состав жюри - Мария." width="260" height="294" />
-                  <source media="(max-width: 1365px)" srcset="
-                        img/jury/jury-Mary-tablet.jpg    1x,
-                        img/jury/jury-Mary-tablet@2x.jpg 2x
-                      " />
-                  <source media="(max-width: 767px)" srcset="
-                        img/jury/jury-Mary-mobile.jpg    1x,
-                        img/jury/jury-Mary-mobile@2x.jpg 2x
-                      " />
                 </picture>
-                <span class="jury__name">Мария Кетова</span>
+                <button class="jury__name" type="button">Мария Кетова</button>
+                <p class="jury__sport">CrossFit</p>
+                <ul class="jury__details-list">
+                  <li class="jury__details-item">Certified Level 3 Trainer</li>
+                  <li class="jury__details-item">Победитель чемпионата республики Беларусь по CrossFit</li>
+                  <li class="jury__details-item">Опыт — 9 лет</li>
+                </ul>
               </div>
               <div class="jury__slide swiper-slide">
                 <picture>
@@ -333,19 +357,24 @@
                         img/jury/jury-Kira-desktop.webp    1x,
                         img/jury/jury-Kira-desktop@2x.webp 2x
                       " />
-
+                  <source type="image/jpeg" media="(max-width: 1365px)" srcset="
+                      img/jury/jury-Kira-tablet.jpg    1x,
+                      img/jury/jury-Kira-tablet@2x.jpg 2x
+                    " />
+                  <source type="image/jpeg" media="(max-width: 767px)" srcset="
+                      img/jury/jury-Kira-mobile.jpg    1x,
+                      img/jury/jury-Kira-mobile@2x.jpg 2x
+                    " />
                   <img src="img/jury/jury-Kira-desktop.jpg" srcset="img/jury/jury-Kira-desktop@2x.jpg 2x"
                     alt="Состав жюри - Кира." width="260" height="294" />
-                  <source media="(max-width: 1365px)" srcset="
-                        img/jury/jury-Kira-tablet.jpg    1x,
-                        img/jury/jury-Kira-tablet@2x.jpg 2x
-                      " />
-                  <source media="(max-width: 767px)" srcset="
-                        img/jury/jury-Kira-mobile.jpg    1x,
-                        img/jury/jury-Kira-mobile@2x.jpg 2x
-                      " />
                 </picture>
-                <span class="jury__name">Кира Антонова</span>
+                <button class="jury__name" type="button">Кира Антонова</button>
+                <p class="jury__sport">Бокс</p>
+                <ul class="jury__details-list">
+                  <li class="jury__details-item">Сертифицированный тренер по боксу</li>
+                  <li class="jury__details-item">Победитель чемпионата России по боксу</li>
+                  <li class="jury__details-item">Опыт — 7 лет</li>
+                </ul>
               </div>
               <div class="jury__slide swiper-slide">
                 <picture>
@@ -361,19 +390,24 @@
                         img/jury/jury-Oleg-desktop.webp    1x,
                         img/jury/jury-Oleg-desktop@2x.webp 2x
                       " />
-
+                  <source type="image/jpeg" media="(max-width: 1365px)" srcset="
+                      img/jury/jury-Oleg-tablet.jpg    1x,
+                      img/jury/jury-Oleg-tablet@2x.jpg 2x
+                    " />
+                  <source type="image/jpeg" media="(max-width: 767px)" srcset="
+                      img/jury/jury-Oleg-mobile.jpg    1x,
+                      img/jury/jury-Oleg-mobile@2x.jpg 2x
+                    " />
                   <img src="img/jury/jury-Oleg-desktop.jpg" srcset="img/jury/jury-Oleg-desktop@2x.jpg 2x"
                     alt="Состав жюри - Олег." width="260" height="294" />
-                  <source media="(max-width: 1365px)" srcset="
-                        img/jury/jury-Oleg-tablet.jpg    1x,
-                        img/jury/jury-Oleg-tablet@2x.jpg 2x
-                      " />
-                  <source media="(max-width: 767px)" srcset="
-                        img/jury/jury-Oleg-mobile.jpg    1x,
-                        img/jury/jury-Oleg-mobile@2x.jpg 2x
-                      " />
                 </picture>
-                <span class="jury__name">Олег Джурашвили</span>
+                <button class="jury__name" type="button">Олег Джурашвили</button>
+                <p class="jury__sport">Йога</p>
+                <ul class="jury__details-list">
+                  <li class="jury__details-item">Тренер по акробатической йоге</li>
+                  <li class="jury__details-item">Председатель федерации йоги в России</li>
+                  <li class="jury__details-item">Опыт — 13 лет</li>
+                </ul>
               </div>
               <div class="jury__slide swiper-slide">
                 <picture>
@@ -389,19 +423,24 @@
                         img/jury/jury-Sonya-desktop.webp    1x,
                         img/jury/jury-Sonya-desktop@2x.webp 2x
                       " />
-
+                  <source type="image/jpeg" media="(max-width: 1365px)" srcset="
+                      img/jury/jury-Sonya-tablet.jpg    1x,
+                      img/jury/jury-Sonya-tablet@2x.jpg 2x
+                    " />
+                  <source type="image/jpeg" media="(max-width: 767px)" srcset="
+                      img/jury/jury-Sonya-mobile.jpg    1x,
+                      img/jury/jury-Sonya-mobile@2x.jpg 2x
+                    " />
                   <img src="img/jury/jury-Sonya-desktop.jpg" srcset="img/jury/jury-Sonya-desktop@2x.jpg 2x"
                     alt="Состав жюри - Соня." width="260" height="294" />
-                  <source media="(max-width: 1365px)" srcset="
-                        img/jury/jury-Sonya-tablet.jpg    1x,
-                        img/jury/jury-Sonya-tablet@2x.jpg 2x
-                      " />
-                  <source media="(max-width: 767px)" srcset="
-                        img/jury/jury-Sonya-mobile.jpg    1x,
-                        img/jury/jury-Sonya-mobile@2x.jpg 2x
-                      " />
                 </picture>
-                <span class="jury__name">Соня Ли</span>
+                <button class="jury__name" type="button">Соня Ли</button>
+                <p class="jury__sport">Бокс</p>
+                <ul class="jury__details-list">
+                  <li class="jury__details-item">Тренер боевых искусств</li>
+                  <li class="jury__details-item">Мастер спорта России по боксу</li>
+                  <li class="jury__details-item">Опыт — 12 лет</li>
+                </ul>
               </div>
               <div class="jury__slide swiper-slide">
                 <picture>
@@ -417,24 +456,31 @@
                         img/jury/jury-Roman-desktop.webp    1x,
                         img/jury/jury-Roman-desktop@2x.webp 2x
                       " />
-
+                  <source type="image/jpeg" media="(max-width: 1365px)" srcset="
+                      img/jury/jury-Roman-tablet.jpg    1x,
+                      img/jury/jury-Roman-tablet@2x.jpg 2x
+                    " />
+                  <source type="image/jpeg" media="(max-width: 767px)" srcset="
+                      img/jury/jury-Roman-mobile.jpg    1x,
+                      img/jury/jury-Roman-mobile@2x.jpg 2x
+                    " />
                   <img src="img/jury/jury-Roman-desktop.jpg" srcset="img/jury/jury-Roman-desktop@2x.jpg 2x"
                     alt="Состав жюри - Роман." width="260" height="294" />
-                  <source media="(max-width: 1365px)" srcset="
-                        img/jury/jury-Roman-tablet.jpg    1x,
-                        img/jury/jury-Roman-tablet@2x.jpg 2x
-                      " />
-                  <source media="(max-width: 767px)" srcset="
-                        img/jury/jury-Roman-mobile.jpg    1x,
-                        img/jury/jury-Roman-mobile@2x.jpg 2x
-                      " />
                 </picture>
-                <span class="jury__name">Роман Алексеев</span>
+                <button class="jury__name" type="button">Роман Алексеев</button>
+                <p class="jury__sport">CrossFit</p>
+                <ul class="jury__details-list">
+                  <li class="jury__details-item">Certified Level 2 Trainer</li>
+                  <li class="jury__details-item">Призёр чемпионата России по CrossFit</li>
+                  <li class="jury__details-item">Опыт — 5 лет</li>
+                </ul>
               </div>
             </div>
 
             <div class="jury__button jury__button--next swiper-button-next">
-              <img src="img/svg/jury-next.svg" width="16" height="32" alt="" />
+              <svg width="16" height="32">
+                <use href="img/sprite.svg#jury-next"></use>
+              </svg>
             </div>
           </div>
         </div>
@@ -465,7 +511,6 @@
               </div>
             </li>
             <li class="advantages__item">
-              <!-- здесь скрытый заголовок и флекся обратная -->
               <div>
                 <h2>Современные тренажеры на все группы мышц</h2>
               </div>
@@ -517,21 +562,20 @@
                     srcset="img/special-offer/special-offer-tablet.webp 1x, img/special-offer/special-offer-tablet@2x.webp 2x">
                   <source type="image/webp"
                     srcset="img/special-offer/special-offer-desktop.webp 1x, img/special-offer/special-offer-desktop@2x.webp 2x">
-
+                  <source type="image/jpeg" media="(max-width: 1365px)"
+                    srcset="img/special-offer/special-offer-tablet.jpg 1x, img/special-offer/special-offer-tablet@2x.jpg 2x">
+                  <source type="image/jpeg" media="(max-width: 767px)"
+                    srcset="img/special-offer/special-offer-mobile.jpg 1x, img/special-offer/special-offer-mobile@2x.jpg 2x">
                   <img src="img/special-offer/special-offer-desktop.jpg"
                     srcset="img/special-offer/special-offer-desktop@2x.jpg 2x" alt="Девушка в спортивной одежде."
                     width="660" height="500">
-                  <source media="(max-width: 1365px)"
-                    srcset="img/special-offer/special-offer-tablet.jpg 1x, img/special-offer/special-offer-tablet@2x.jpg 2x">
-                  <source media="(max-width: 767px)"
-                    srcset="img/special-offer/special-offer-mobile.jpg 1x, img/special-offer/special-offer-mobile@2x.jpg 2x">
                 </picture>
               </div>
             </div>
             <div class="special-offer__other-offers">
               <div>
                 <h2>Месяц бесплатно</h2>
-                <p>Приведи друга, получи абонемент в&nbspподарок</p>
+                <p>Приведи друга, получи абонемент в&nbsp;подарок</p>
                 <a href="#">Подробнее</a>
               </div>
               <div>
@@ -544,10 +588,99 @@
           </div>
         </div>
       </section>
+
     </main>
-    <!-- <footer>
-      <div class="container"></div>
-    </footer> -->
+    <footer>
+      <section class="main-footer" data-test="footer">
+        <div class="main-footer__wrapper">
+          <section class="main-footer__gift">
+            <h1 class="main-footer__title main-footer__title--gift">Бесплатное занятие</h1>
+            <form class="form" action="https://echo.htmlacademy.ru" method="get">
+              <label class="form__label">
+                <input class="form__input" type="text" name="person-name" placeholder="Имя">
+              </label>
+              <label class="form__label">
+                <input class="form__input form__input--phone" type="tel" name="person-phone" placeholder="Телефон">
+              </label>
+              <button class="form__button" type="submit">Отправить</button>
+            </form>
+          </section>
+          <section class="main-footer__contacts contacts">
+            <h1 class="main-footer__title main-footer__title--contacts">Контакты</h1>
+            <div class="contacts__wrapper">
+              <ul class="contacts__list contacts__list--info">
+                <li class="contacts__item">
+                  <p class="contacts__title">Адрес:</p>
+                  <p class="contacts__description">г. Омск, ул. 60 лет Октября, 7</p>
+                </li>
+                <li class="contacts__item">
+                  <p class="contacts__title">График работы:</p>
+                  <p class="contacts__description">Пн-Вс: с 8:00 до 22:00</p>
+                </li>
+              </ul>
+              <ul class="contacts__list contacts__list--contacts">
+                <li class="contacts__item">
+                  <p class="contacts__title">Телефон:</p>
+                  <a class="contacts__description" href="tel:+78005555555">8-800-555-55-55</a>
+                </li>
+                <li class="contacts__item">
+                  <p class="contacts__title">Email:</p>
+                  <a class="contacts__description" href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+        <section class="main-footer__links footer-links">
+          <h2 class="visually-hidden">Ссылки на социальные сети и страницы</h2>
+          <div class="footer-links__wrapper">
+            <a class="footer-links__logo" href="index.html" aria-label="Ссылка на главную страницу">Supergym</a>
+
+            <ul class="footer-links__list">
+              <li class="footer-links__item">
+                <a class="footer-links__link" href="#">Услуги</a>
+              </li>
+              <li class="footer-links__item">
+                <a class="footer-links__link" href="#">Абонементы</a>
+              </li>
+              <li class="footer-links__item">
+                <a class="footer-links__link" href="#">Акции</a>
+              </li>
+              <li class="footer-links__item">
+                <a class="footer-links__link" href="#">Тренеры</a>
+              </li>
+              <li class="footer-links__item">
+                <a class="footer-links__link" href="#">Расписание</a>
+              </li>
+            </ul>
+
+            <ul class="footer-links__list social-media">
+              <li class="social-media__item social-media__item--vk">
+                <a class="social-media__logo" href="" aria-label="Ссылка на группу во Вконтакте">
+                  <svg width="14" height="22">
+                    <use href="img/sprite.svg#vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-media__item social-media__item--ok">
+                <a class="social-media__logo" href="" aria-label="Ссылка на Одноклассники">
+                  <svg width="9" height="16">
+                    <use href="img/sprite.svg#ok"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-media__item social-media__item--reddit">
+                <a class="social-media__logo" href="" aria-label="Ссылка на Реддит">
+                  <svg width="14" height="14">
+                    <use href="img/sprite.svg#reddit"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </section>
+    </footer>
   </div>
 
   <script src="js/vendor.min.js"></script>

@@ -131,6 +131,22 @@
     justify-self: end;
     text-align: center;
     user-select: none;
+    transition: 0.5s;
+
+    @include hover-focus {
+      background-color: $color-default-white;
+      color: $color-egyptian-blue;
+    }
+
+    @include active {
+      background-color: $color-default-white;
+      color: $color-sapphire;
+    }
+
+    @include disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
 
     @include vp-1365 {
       padding: size(20px) 0;

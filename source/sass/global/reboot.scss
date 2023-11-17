@@ -12,6 +12,7 @@ body {
 }
 
 html {
+  scroll-behavior: smooth;
   font-style: normal;
   font-weight: 400;
   font-size: size-desktop($fz-default);
@@ -90,7 +91,6 @@ select {
 
 // ie11 X removal
 input {
-
   &::-ms-clear,
   &::-ms-reveal {
     display: none;
@@ -120,13 +120,15 @@ input[type="number"] {
 // ios button \ inputs reset
 select,
 textarea,
-input:matches([type="email"],
-  [type="number"],
-  [type="password"],
-  [type="search"],
-  [type="tel"],
-  [type="text"],
-  [type="url"]) {
+input:matches(
+    [type="email"],
+    [type="number"],
+    [type="password"],
+    [type="search"],
+    [type="tel"],
+    [type="text"],
+    [type="url"]
+) {
   appearance: none;
 }
 

@@ -20,9 +20,20 @@
     font-size: size(26px);
     font-weight: 700;
     line-height: size(26px);
+    border-bottom: size(1px) solid transparent;
+    transition: 0.4s;
 
     @include hover-focus {
-      color: #1c3374;
+      color: $color-resolution-blue;
+    }
+
+    @include active {
+      color: $color-sapphire;
+      border-bottom: size(1px) solid $color-sapphire;
+    }
+
+    @include disabled {
+      color: $color-ghost-white;
     }
 
     @include vp-1365 {
