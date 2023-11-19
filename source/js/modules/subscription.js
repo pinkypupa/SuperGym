@@ -70,28 +70,32 @@ const changePrices = (monthChosen) => {
 };
 
 const changeMonth = () => {
-  monthBtn.forEach(function (item) {
-    item.addEventListener('click', function () {
-      let currentBtn = item;
-      let tabId = currentBtn.getAttribute('data-month');
+  if (monthBtn) {
+    monthBtn.forEach(function (item) {
+      item.addEventListener('click', function () {
+        let currentBtn = item;
+        let tabId = currentBtn.getAttribute('data-month');
 
-      monthBtn.forEach(removeClassActiveTab);
-      currentBtn.classList.add('is-active');
-      changePrices(tabId);
+        monthBtn.forEach(removeClassActiveTab);
+        currentBtn.classList.add('is-active');
+        changePrices(tabId);
+      });
     });
-  });
+  }
 };
 
 const changeItem = () => {
-  allItems.forEach(function (item) {
-    item.addEventListener('click', function () {
-      let currentBlock = item;
-      allItems.forEach(removeClassActiveTab);
-      currentBlock.classList.add('is-active');
-      subscriptionButtons.forEach(removeClassActiveTab);
-      item.querySelector('[data-button]').classList.add('is-active');
+  if (allItems) {
+    allItems.forEach(function (item) {
+      item.addEventListener('click', function () {
+        let currentBlock = item;
+        allItems.forEach(removeClassActiveTab);
+        currentBlock.classList.add('is-active');
+        subscriptionButtons.forEach(removeClassActiveTab);
+        item.querySelector('[data-button]').classList.add('is-active');
+      });
     });
-  });
+  }
 };
 
 export {changeItem, changeMonth};

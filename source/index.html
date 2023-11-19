@@ -221,13 +221,21 @@
         </div>
         <div class="announcement__jury jury container">
           <h2 class="jury__title">Жюри</h2>
-          <div class="jury__slider swiper" data-swiper="jury">
 
-            <div class="jury__button jury__button--previous swiper-button-prev" data-swiper="jury-button-prev">
+          <div class="jury__buttons">
+            <div class="jury__button jury__button--previous" data-swiper="jury-button-prev">
               <svg width="16" height="32">
-                <use href="img/sprite.svg#jury-previous"></use>
+                <use href="img/sprite.svg#slider-previous"></use>
               </svg>
             </div>
+            <div class="jury__button jury__button--next" data-swiper="jury-button-next">
+              <svg width="16" height="32">
+                <use href="img/sprite.svg#slider-next"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="jury__slider swiper" data-swiper="jury">
 
             <div class="jury__main-wrapper swiper-wrapper">
 
@@ -497,11 +505,6 @@
               </div>
             </div>
 
-            <div class="jury__button jury__button--next swiper-button-next" data-swiper="jury-button-next">
-              <svg width="16" height="32">
-                <use href="img/sprite.svg#jury-next"></use>
-              </svg>
-            </div>
           </div>
         </div>
       </section>
@@ -617,7 +620,6 @@
           <h2>Вопросы и ответы</h2>
 
           <div class="faq__wrapper" data-tabs="parent" data-delay="250">
-
             <!-- див для позиционирования блока кнопок внутри общего дива -->
             <div class="faq__tabs categories" data-tabs="controls">
               <!-- сами кнопочки - флекся -->
@@ -864,25 +866,29 @@
                 </ul>
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
       <section class="feedback">
-        <div class="container">
+        <div class="feedback__main-wrapper container">
           <h2>Отзывы</h2>
 
-          <div class="feedback__slider swiper" data-swiper="feedback">
-
-            <div class="feedback__button feedback__button--previous swiper-button-prev" data-swiper="feedback-button-prev">
+          <div class="feedback__buttons">
+            <div class="feedback__button feedback__button--previous" data-swiper="feedback-button-prev">
               <svg width="16" height="32">
-                <use href="img/sprite.svg#jury-previous"></use>
+                <use href="img/sprite.svg#slider-previous"></use>
               </svg>
             </div>
+            <div class="feedback__button feedback__button--next" data-swiper="feedback-button-next">
+              <svg width="16" height="32">
+                <use href="img/sprite.svg#slider-next"></use>
+              </svg>
+            </div>
+          </div>
 
-            <div class="feedback__wrapper swiper-wrapper">
-
+          <div class="feedback__slider swiper-container" data-swiper="feedback">
+            <div class="swiper-wrapper feedback__wrapper swiper-wrapper">
               <div class="feedback__slide swiper-slide">
                 <picture>
                   <source type="image/webp" srcset="img/feedback/Ann.webp 1x, img/feedback/Ann@2x.webp 2x">
@@ -895,7 +901,6 @@
                     дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
                 </div>
               </div>
-
               <div class="feedback__slide swiper-slide">
                 <picture>
                   <source type="image/webp" srcset="img/feedback/Greg.webp 1x, img/feedback/Greg@2x.webp 2x">
@@ -908,17 +913,15 @@
                     дочкой уже второй год, всё нравится»</p>
                 </div>
               </div>
-
+              <!-- <div class="feedback__button feedback__button--next swiper-button-next"
+                data-swiper="feedback-button-next">
+              </div>
+              <div class="feedback__button feedback__button--previous swiper-button-prev"
+                data-swiper="feedback-button-prev"></div> -->
             </div>
 
-            <div class="feedback__button feedback__button--next swiper-button-next" data-swiper="feedback-button-next">
-              <svg width="16" height="32">
-                <use href="img/sprite.svg#jury-next"></use>
-              </svg>
-            </div>
 
           </div>
-        </div>
       </section>
 
     </main>

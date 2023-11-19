@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
 import {iosVhFix} from './utils/ios-vh-fix';
 // import {Form} from './modules/form-validate/form';
-import {swiperJury} from './modules/jury-swiper';
-// import {initSwiperFeedback} from './modules/feedback-swiper';
+import {initSwiperJury} from './modules/jury-swiper';
+import {initSwiperFeedback} from './modules/feedback-swiper';
 import {changeItem, changeMonth} from './modules/subscription';
 import {playVideo} from './modules/iframe';
 import {validateForm} from './modules/validate-form';
@@ -20,21 +20,12 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
 
-  swiperJury.slideNext();
-  // swiperFeedback.slideNext();
+  initSwiperJury();
   changeItem();
   changeMonth();
   playVideo();
   validateForm();
-  // initSwiperFeedback();
-
-  // eslint-disable-next-line no-unused-vars
-  const swiper = new window.Swiper('.feedback__slider', {
-    navigation: {
-      nextEl: '.feedback__button--next',
-      prevEl: '.feedback__button--previous',
-    },
-  });
+  initSwiperFeedback();
 
   window.addEventListener('load', () => {
     initAccordions();

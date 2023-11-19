@@ -1,13 +1,20 @@
-// function initSwiperFeedback() {
-//   const swiperFeedback = new window.Swiper('.feedback__slider', {
-//     slidesPerView: 1,
-//     direction: 'horizontal',
-//     navigation: {
-//       nextEl: '[data-swiper="feedback-button-next"]',
-//       prevEl: '[data-swiper="feedback-button-prev"]',
-//       clickable: true,
-//     },
-//   });
-// }
-// // swiperFeedback();
-// export {initSwiperFeedback};
+/* eslint-disable no-new */
+import Swiper from '../vendor/swiper';
+const feedbackSlider = document.querySelector('[data-swiper="feedback"]');
+const feedbackNextButton = document.querySelector('[data-swiper="feedback-button-next"]');
+const feedbackPrevButton = document.querySelector('[data-swiper="feedback-button-prev"]');
+
+const initSwiperFeedback = () => {
+  if (feedbackSlider) {
+    new Swiper(feedbackSlider, {
+      slidesPerView: 1,
+
+      navigation: {
+        nextEl: feedbackNextButton,
+        prevEl: feedbackPrevButton,
+      },
+    });
+  }
+};
+
+export {initSwiperFeedback};

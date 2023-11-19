@@ -1,3 +1,7 @@
+.jury {
+  position: relative;
+}
+
 .jury__title {
   margin: 0;
   font-family: $ff-alumni;
@@ -150,8 +154,21 @@
   padding-bottom: size(12px);
 }
 
-.jury__button {
+.jury__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: size(56px);
   position: absolute;
+  // width: calc($width-block + size(170px));
+  width: 100%;
+  bottom: 45%;
+  left: 0;
+  // transform: translateY(-70%);
+}
+
+.jury__button {
+  // position: absolute;
   width: size(56px);
   height: size(56px);
   border: size(1px) solid transparent;
@@ -163,26 +180,26 @@
   align-items: center;
 
   &--previous {
-    left: size(26px);
+    // left: size(26px);
 
     @include vp-1365 {
-      left: size(25px);
+      // left: size(25px);
     }
 
     @include vp-767 {
-      left: size(-5px);
+      // left: size(-5px);
     }
   }
 
   &--next {
-    right: size(26px);
+    // right: size(26px);
 
     @include vp-1365 {
-      right: size(25px);
+      // right: size(25px);
     }
 
     @include vp-767 {
-      right: size(-5px);
+      // right: size(-5px);
     }
   }
 
@@ -197,6 +214,12 @@
     svg {
       stroke: $color-default-white;
     }
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0.3;
+    pointer-events: none;
+    cursor: default;
   }
 
   svg {

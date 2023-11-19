@@ -1,3 +1,7 @@
+.subscription {
+  position: relative;
+}
+
 .subscription__wrapper {
   background-color: $color-ghost-white;
   display: flex;
@@ -138,7 +142,7 @@
 
 .subscription__image {
   position: absolute;
-  bottom: 54%;
+  bottom: -25%;
   right: -12%;
   transform: translateY(size(-14px));
 

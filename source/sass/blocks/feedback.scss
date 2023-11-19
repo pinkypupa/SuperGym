@@ -1,3 +1,5 @@
+$width-block: size(560px);
+
 .feedback {
   padding-top: size(120px);
   padding-bottom: size(120px);
@@ -14,27 +16,37 @@
   }
 }
 
-.feedback__slider {
+.feedback__main-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  // width: 100%;
+  align-items: center;
+  // height: 100vh;
+  margin: 0;
+}
+
+.feedback__slider {
+  width: $width-block;
+  min-height: size(260px);
+  overflow: hidden;
   position: relative;
+  box-shadow: 0 0 size(40px) 0 rgba(28, 51, 116, 0.2);
 }
 
 .feedback__wrapper {
-  width: 100%;
-  height: 100%;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
 .feedback__slide {
   padding: size(60px);
   background-color: $color-resolution-blue;
-  box-shadow: 0 0 size(40px) 0 rgba(28, 51, 116, 0.2);
-  max-width: size(560px);
   color: $color-default-white;
+  width: $width-block;
+  height: auto;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
   gap: size(30px);
 
   div {
@@ -45,6 +57,9 @@
 
   h3 {
     margin: 0;
+    font-size: size(22px);
+    font-weight: 400;
+    line-height: size(22px);
   }
 
   p {
@@ -59,9 +74,18 @@
   }
 }
 
-.feedback__button {
-  background-color: transparent;
+.feedback__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: size(56px);
   position: absolute;
+  width: calc($width-block + size(170px));
+  bottom: 9%;
+  transform: translateY(-70%);
+}
+
+.feedback__button {
   width: size(56px);
   height: size(56px);
   border: size(1px) solid transparent;
@@ -71,29 +95,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 30%;
 
   &--previous {
-    left: 10%;
+    // left: -10%;
 
     @include vp-1365 {
-      left: size(25px);
+      // left: size(25px);
     }
 
     @include vp-767 {
-      left: size(-5px);
+      // left: size(-5px);
     }
   }
 
   &--next {
-    right: 10%;
+    // right: -10%;
 
     @include vp-1365 {
-      right: size(25px);
+      // right: size(25px);
     }
 
     @include vp-767 {
-      right: size(-5px);
+      // right: size(-5px);
     }
   }
 
@@ -108,6 +131,12 @@
     svg {
       stroke: $color-default-white;
     }
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0.3;
+    pointer-events: none;
+    cursor: default;
   }
 
   svg {
