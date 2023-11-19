@@ -5,8 +5,8 @@ const swiperJury = new window.Swiper('[data-swiper="jury"]', {
   initialSlide: 0,
 
   navigation: {
-    nextEl: '[data-swiper="jury-button-prev"]',
-    prevEl: '[data-swiper="jury-button-next"]',
+    nextEl: '[data-swiper="jury-button-next"]',
+    prevEl: '[data-swiper="jury-button-prev"]',
     clickable: true,
   },
 
