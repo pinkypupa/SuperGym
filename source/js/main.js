@@ -1,28 +1,14 @@
+/* eslint-disable no-console */
 import {iosVhFix} from './utils/ios-vh-fix';
-// import {initModals} from './modules/modals/init-modals';
 // import {Form} from './modules/form-validate/form';
-import {swiper} from './jury-swiper';
-
-// пока сделаем через ид, потом надо через дата-атрибуты как-то
-const videoWrapper = document.querySelector('.gym__video');
-const videoPlayer = document.getElementById('videoPoster');
-const playButton = document.getElementById('playButton');
-
+import {swiperJury} from './modules/jury-swiper';
+import {swiperFeedback} from './modules/feedback-swiper';
+import {changeItem, changeMonth} from './modules/subscription';
+import {playVideo} from './modules/iframe';
+import {validateForm} from './modules/validate-form';
+import {initAccordions} from './modules/init-accordion';
+import {initTabs} from './modules/init-tabs';
 // ---------------------------------
-
-function playVideo() {
-  videoPlayer.remove();
-  playButton.remove();
-  const iframePlayer = document.createElement('iframe');
-  iframePlayer.setAttribute('src', 'https://www.youtube.com/embed/9TZXsZItgdw?si=twR-ewfRYAOdjvuk?&autoplay=1');
-  iframePlayer.setAttribute('title', 'videoPlayer');
-  iframePlayer.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
-  iframePlayer.setAttribute('frameborder', '0');
-  iframePlayer.setAttribute('allowfullscreen', '');
-  iframePlayer.setAttribute('width', '364');
-  iframePlayer.setAttribute('height', '228');
-  videoWrapper.append(iframePlayer);
-}
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -34,25 +20,26 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
 
-  videoPlayer.addEventListener('click', () => {
-    playVideo();
+  swiperJury.slideNext();
+  swiperFeedback.slideNext();
+  changeItem();
+  changeMonth();
+  playVideo();
+  validateForm();
+
+  window.addEventListener('load', () => {
+    initAccordions();
+    initTabs();
   });
-
-  playButton.addEventListener('click', () => {
-    playVideo();
-  });
-
-  swiper.slideNext();
-
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
-  // window.addEventListener('load', () => {
-  //   initModals();
-  //   const form = new Form();
-  //   window.form = form;
-  //   form.init();
-  // });
+//   window.addEventListener('load', () => {
+//     initModals();
+//     const form = new Form();
+//     window.form = form;
+//     form.init();
+//   });
 });
 
 // ---------------------------------

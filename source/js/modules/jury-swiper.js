@@ -1,14 +1,12 @@
-import './vendor/swiper';
-
-const swiper = new window.Swiper('.jury__slider', {
+const swiperJury = new window.Swiper('[data-swiper="jury"]', {
   slidesPerGroup: 1,
   loop: true,
   speed: 300,
   initialSlide: 0,
 
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '[data-swiper="jury-button-prev"]',
+    prevEl: '[data-swiper="jury-button-next"]',
     clickable: true,
   },
 
@@ -33,4 +31,4 @@ const swiper = new window.Swiper('.jury__slider', {
   },
 });
 
-export {swiper};
+export {swiperJury};

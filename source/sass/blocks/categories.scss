@@ -1,0 +1,69 @@
+.categories {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    list-style: none;
+    gap: size(10px);
+
+    @include vp-1365 {
+      flex-direction: row;
+    }
+
+    @include vp-767 {
+      gap: size(8px);
+    }
+  }
+
+  button {
+    color: $color-sapphire;
+    background-color: transparent;
+    padding: size(18px);
+    border: size(1px) solid rgba(16, 38, 84, 0.2);
+    width: size(260px);
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+
+    &.is-active {
+      background: $outlining-red-to-right;
+      border-image: $outlining-red-to-right;
+      border-image-slice: 1;
+      color: $color-default-white;
+    }
+
+    @include hover-focus {
+      border-color: $color-sapphire;
+    }
+
+    @include disabled {
+      color: #c8c9cc;
+    }
+
+    @include vp-1365 {
+      max-width: size(162px);
+    }
+
+    @include vp-767 {
+      padding: size(14px);
+      // max-width: unset;
+      width: size(141px);
+    }
+  }
+
+  p {
+    line-height: size(18px);
+    margin: 0;
+
+    @include vp-1365 {
+      font-size: size(18px);
+    }
+
+    @include vp-767 {
+      font-size: size(16px);
+      line-height: size(16px);
+    }
+  }
+}

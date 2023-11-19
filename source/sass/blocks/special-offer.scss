@@ -14,7 +14,7 @@
     padding-bottom: size(70px);
   }
 
-  h1 {
+  h2 {
     font-family: $ff-alumni;
     font-size: size(54px);
     font-weight: 600;
@@ -89,7 +89,7 @@
     align-items: center;
   }
 
-  h2 {
+  h3 {
     font-size: size(26px);
     line-height: size(26px);
     margin: 0 0 size(15px);
@@ -142,18 +142,41 @@
     line-height: size(14px);
     letter-spacing: size(0.7px);
     text-transform: uppercase;
-    padding-bottom: size(2px);
-    border-bottom: size(1px) solid $color-default-white;
+    // padding-bottom: size(2px);
+    padding: size(2px);
+    border: size(1px) solid transparent;
+    border-bottom-color: $color-default-white;
     margin-top: auto;
     display: inline;
     width: fit-content;
+
+    &:hover:not(.focus-visible):not(:disabled) {
+      opacity: 0.8;
+    }
+
+    &:not(:disabled):not(:active):focus,
+    &:not(:disabled):not(:active):focus-visible {
+      outline-offset: size(7px);
+      outline: size(1px) solid $color-default-white;
+      border-bottom-color: transparent;
+    }
+
+    @include active {
+      border-bottom-color: $color-default-white;
+    }
+
+    @include disabled {
+      opacity: 0.5;
+    }
   }
 }
 
 .special-offer__image {
   img {
+    object-fit: cover;
     width: size(280px);
-    max-height: size(462px);
+    height: 100%;
+    // max-height: size(462px);
 
     @include vp-1365 {
       min-width: size(399px);
@@ -206,7 +229,7 @@
     }
   }
 
-  h2 {
+  h3 {
     margin: 0 0 size(10px);
     font-size: size(26px);
     line-height: size(26px);
@@ -240,10 +263,31 @@
     letter-spacing: size(0.7px);
     text-transform: uppercase;
     color: $color-resolution-blue;
-    padding: 0 0 size(3px);
-    border-bottom: size(1px) solid $color-resolution-blue;
+    // padding: 0 0 size(3px);
+    padding: size(3px);
+    border: size(1px) solid transparent;
+    border-bottom-color: $color-sapphire;
     margin-top: auto;
     display: inline;
     width: fit-content;
+
+    &:hover:not(.focus-visible):not(:disabled) {
+      opacity: 0.8;
+    }
+
+    &:not(:disabled):not(:active):focus,
+    &:not(:disabled):not(:active):focus-visible {
+      outline-offset: size(7px);
+      outline: size(1px) solid $color-resolution-blue;
+      border-bottom-color: transparent;
+    }
+
+    @include active {
+      border-bottom-color: $color-sapphire;
+    }
+
+    @include disabled {
+      opacity: 0.3;
+    }
   }
 }

@@ -34,6 +34,7 @@
   font-size: size(14px);
   line-height: size(22px);
   color: $color-default-white;
+  outline: none;
 
   &::placeholder {
     color: $color-default-white;
@@ -68,6 +69,24 @@
       margin-bottom: size(9px);
     }
   }
+
+  &:hover:not(.focus-visible):not(:disabled) {
+    border-bottom-color: $color-default-white;
+  }
+
+  &:not(:disabled):not(:active):focus,
+  &:not(:disabled):not(:active):focus-visible,
+  &:active:not(.focus-visible):not(:disabled) {
+    border-color: $color-default-white;
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  @include disabled {
+    opacity: 0.8;
+  }
 }
 
 .form__button {
@@ -81,6 +100,7 @@
   letter-spacing: size(0.6px);
   text-transform: uppercase;
   color: $color-default-white;
+  transition: 0.3s;
 
   @include vp-1365 {
     padding: size(20px);
@@ -88,5 +108,19 @@
 
   @include vp-767 {
     grid-area: 3/1/4/2;
+  }
+
+  @include hover-focus {
+    color: $color-egyptian-blue;
+    background-color: $color-default-white;
+  }
+
+  @include active {
+    color: $color-sapphire;
+    background-color: $color-default-white;
+  }
+
+  @include disabled {
+    opacity: 0.5;
   }
 }

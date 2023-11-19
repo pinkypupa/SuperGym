@@ -11,8 +11,8 @@
 .social-media__item {
   width: size(25px);
   height: size(25px);
-  border-radius: 50%;
-  background-color: $color-default-white;
+  // border-radius: 50%;
+  // background-color: $color-default-white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,16 +21,57 @@
 .social-media__logo {
   width: size(25px);
   height: size(25px);
+  border-radius: 50%;
+  background-color: $color-default-white;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: size(1px);
+  transition: 0.2s;
 
   &--vk {
-    transform: translateX(-4%);
+    svg {
+      width: size(14px);
+      height: size(22px);
+    }
+  }
+
+  &--ok {
+    svg {
+      width: size(9px);
+      height: size(16px);
+    }
+  }
+
+  &--reddit {
+    svg {
+      width: size(14px);
+      height: size(14px);
+    }
   }
 
   svg {
     fill: $color-black-russian;
+  }
+
+  @include hover-focus {
+    background-color: $color-egyptian-blue;
+    outline: none;
+
+    svg {
+      fill: $color-default-white;
+    }
+  }
+
+  @include active {
+    background-color: $color-sapphire;
+
+    svg {
+      fill: $color-default-white;
+    }
+  }
+
+  @include disabled {
+    opacity: 0.8;
   }
 }

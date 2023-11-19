@@ -26,9 +26,10 @@
   border: size(7px) solid $color-default-white;
   position: relative;
   z-index: 10;
-  transition: 0.4s;
+  overflow: hidden;
+  outline: none;
 
-  &--current {
+  &.is-active {
     border: size(7px) solid $color-crimson;
     border-image: linear-gradient(135deg, $color-crimson 20%, #00359f 100%);
     border-image-slice: 1;
@@ -64,6 +65,48 @@
   &--full {
     &::before {
       content: "2700";
+    }
+  }
+
+  &--coach-six {
+    &::before {
+      content: "30000";
+      right: 13%;
+    }
+  }
+
+  &--daily-six {
+    &::before {
+      content: "10200";
+      right: 13%;
+    }
+  }
+
+  &--full-six {
+    &::before {
+      content: "16200";
+      right: 13%;
+    }
+  }
+
+  &--coach-twelve {
+    &::before {
+      content: "60000";
+      right: 13%;
+    }
+  }
+
+  &--daily-twelve {
+    &::before {
+      content: "20400";
+      right: 13%;
+    }
+  }
+
+  &--full-twelve {
+    &::before {
+      content: "32400";
+      right: 13%;
     }
   }
 
@@ -168,15 +211,14 @@
 }
 
 .card-list__rouble {
-  font-family: $ff-rouble;
-  color: $color-sapphire;
-  font-size: size(60px);
-  font-weight: 600;
-  line-height: size(90px);
+  svg {
+    width: size(30px);
+    height: size(42px);
 
-  @include vp-767 {
-    font-size: size(48px);
-    line-height: size(72px);
+    @include vp-767 {
+      width: size(24px);
+      height: size(33px);
+    }
   }
 }
 
@@ -213,7 +255,6 @@
   }
 
   @include vp-1365 {
-    // может тут тоже уменьшить паддинг боковой для переполнения? и наверху в десктопе
     padding: size(20px) size(42px);
   }
 
@@ -223,7 +264,7 @@
     max-width: size(205px);
   }
 
-  &--current {
+  &.is-active {
     background: $outlining-red-to-right;
     border-image: $outlining-red-to-right;
     border-image-slice: 1;

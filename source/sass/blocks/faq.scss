@@ -1,0 +1,212 @@
+.faq {
+  background-color: $color-ghost-white;
+  padding-top: size(120px);
+  padding-bottom: size(120px);
+
+  @include vp-1365 {
+    padding-top: size(100px);
+    padding-bottom: size(100px);
+  }
+
+  @include vp-767 {
+    padding-top: size(70px);
+    padding-bottom: size(70px);
+  }
+
+  h2 {
+    font-family: $ff-alumni;
+    font-size: size(54px);
+    font-weight: 600;
+    line-height: size(54px);
+    letter-spacing: size(1.62px);
+    margin: 0 0 size(51px);
+
+    @include vp-1365 {
+      font-size: size(42px);
+      line-height: size(42px);
+      letter-spacing: size(1.26px);
+      margin: 0 0 size(50px);
+      text-align: center;
+    }
+
+    @include vp-767 {
+      font-size: size(32px);
+      line-height: size(32px);
+      letter-spacing: size(0.96px);
+      margin: 0 0 size(37px);
+    }
+  }
+}
+
+.faq__wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: size(40px);
+
+  @include vp-1365 {
+    flex-direction: column;
+  }
+
+  @include vp-767 {
+    gap: size(30px);
+  }
+}
+
+.faq__answers {
+  width: 100%;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transition: 1s;
+  }
+
+  li {
+    padding: size(25px) 0 size(25px);
+    border-top: size(1px) solid rgba(28, 51, 116, 0.2);
+    border-bottom: size(1px) solid transparent;
+
+    &:last-child {
+      border-bottom-color: rgba(28, 51, 116, 0.2);
+    }
+
+    &.is-active {
+      button {
+        background-color: $color-resolution-blue;
+
+        &::before {
+          background-color: $color-default-white;
+        }
+
+        &::after {
+          content: unset;
+        }
+      }
+
+      div {
+        margin-bottom: size(4px);
+      }
+    }
+
+    @include vp-767 {
+      padding: size(22px) 0 size(22px);
+
+      &.is-active {
+        div {
+          margin-bottom: size(20px);
+        }
+      }
+    }
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    gap: size(20px);
+  }
+
+  h3 {
+    font-size: size(24px);
+    margin: 0;
+    font-weight: 400;
+
+    @include vp-1365 {
+      font-size: size(22px);
+      line-height: size(22px);
+    }
+
+    @include vp-767 {
+      font-size: size(20px);
+      line-height: size(20px);
+      max-width: 238px;
+    }
+  }
+
+  h4 {
+    font-size: size(18px);
+    font-weight: 300;
+    max-width: size(660px);
+    margin: 0;
+
+    @include vp-1365 {
+      max-width: size(560px);
+    }
+  }
+
+  button {
+    min-width: size(40px);
+    height: size(40px);
+    border: size(1px) solid $color-resolution-blue;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+
+    &::before {
+      content: "";
+      width: size(20px);
+      height: size(1px);
+      background-color: $color-resolution-blue;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: size(1px);
+      height: size(20px);
+      background-color: $color-resolution-blue;
+    }
+
+    @include hover-focus {
+      background-color: $color-resolution-blue;
+
+      &::before {
+        background-color: $color-default-white;
+      }
+
+      &::after {
+        background-color: $color-default-white;
+      }
+    }
+
+    @include disabled {
+      opacity: 0.3;
+      background-color: transparent;
+      cursor: not-allowed;
+
+      &.is-open {
+        &::before {
+          background-color: $color-resolution-blue;
+        }
+      }
+    }
+
+    @include vp-767 {
+      min-width: size(30px);
+      height: size(30px);
+
+      &::before {
+        width: size(14px);
+      }
+
+      &::after {
+        height: size(14px);
+      }
+    }
+  }
+
+  br {
+    display: none;
+
+    @include vp-767 {
+      display: block;
+    }
+  }
+}

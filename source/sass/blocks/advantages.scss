@@ -13,7 +13,7 @@
     padding-bottom: size(48px);
   }
 
-  h1 {
+  h2 {
     font-family: $ff-alumni;
     color: $color-sapphire;
     font-size: size(54px);
@@ -74,7 +74,7 @@
     flex-direction: column;
   }
 
-  h2 {
+  h3 {
     margin: 0 0 size(8px) 0;
     font-size: size(22px);
     font-weight: 400;
@@ -92,7 +92,7 @@
     }
   }
 
-  h3 {
+  h4 {
     margin: 0;
     font-size: size(16px);
     font-weight: 300;
@@ -214,7 +214,7 @@
       }
     }
 
-    h2 {
+    h3 {
       font-size: size(16px);
       font-weight: 400;
       line-height: size(24px);
@@ -258,13 +258,13 @@
       background-image: $additional-red-to-right;
     }
 
-    h2 {
+    h3 {
       @include vp-767 {
         margin: 0 0 size(12px);
       }
     }
 
-    h3 {
+    h4 {
       @include vp-767 {
         margin: 0 size(33px);
         // padding-left: size(3px);

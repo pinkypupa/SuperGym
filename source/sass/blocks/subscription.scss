@@ -62,14 +62,22 @@
 }
 
 .subscription__item {
+  position: relative;
+}
+
+.subscription__button {
   font-size: size(20px);
   font-weight: 400;
   line-height: size(20px);
   color: #848fa8;
+  background-color: transparent;
+  border: none;
+  padding: 0;
   padding-bottom: size(11px);
-  position: relative;
+  cursor: pointer;
+  outline: none;
 
-  &--current {
+  &.is-active {
     color: $color-sapphire;
 
     &::after {
@@ -95,19 +103,49 @@
     line-height: size(16px);
     padding-bottom: size(15px);
   }
+
+  @include hover-focus {
+    color: $color-sapphire;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $color-crimson;
+      width: fill-available;
+      height: size(2px);
+      top: 99%;
+      left: 0;
+      display: block;
+    }
+  }
+
+  @include disabled {
+    color: $color-sapphire;
+    opacity: 0.3;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $color-sapphire;
+      width: fill-available;
+      height: size(2px);
+      top: 99%;
+      left: 0;
+      display: block;
+    }
+  }
 }
 
 .subscription__image {
   position: absolute;
-  bottom: 51%;
+  bottom: 54%;
   right: -12%;
   transform: translateY(size(-14px));
 
   img {
-    min-width: size(450px);
+    width: size(450px);
 
     @include vp-1365 {
-      min-width: unset;
       width: size(380px);
     }
   }
