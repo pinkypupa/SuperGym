@@ -11,6 +11,7 @@ const initSwiperJury = () => {
       loop: true,
       speed: 300,
       initialSlide: 0,
+      // centeredSlides: 'true',
 
       navigation: {
         nextEl: swiperJuryNext,
