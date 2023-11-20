@@ -20,16 +20,16 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
 
-  initSwiperJury();
   changeItem();
   changeMonth();
   playVideo();
   validateForm();
-  initSwiperFeedback();
 
   window.addEventListener('load', () => {
     initAccordions();
     initTabs();
+    initSwiperJury();
+    initSwiperFeedback();
   });
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'

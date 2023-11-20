@@ -7,11 +7,8 @@ const swiperJuryPrev = document.querySelector('[data-swiper="jury-button-prev"]'
 const initSwiperJury = () => {
   if (swiperJury) {
     new Swiper(swiperJury, {
-      slidesPerGroup: 1,
-      loop: true,
-      speed: 300,
       initialSlide: 0,
-      // centeredSlides: 'true',
+      loop: true,
 
       navigation: {
         nextEl: swiperJuryNext,
@@ -20,22 +17,25 @@ const initSwiperJury = () => {
       },
 
       breakpoints: {
-        1366: {
-          slidesPerView: 4,
-          spaceBetween: 40,
-          initialSlide: 0,
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          initialSlide: 2,
+          allowTouchMove: true,
         },
 
         768: {
           slidesPerView: 2,
           spaceBetween: 32,
           initialSlide: 2,
+          allowTouchMove: true,
         },
 
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-          initialSlide: 2,
+        1366: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+          initialSlide: 0,
+          allowTouchMove: false,
         },
       },
     });
