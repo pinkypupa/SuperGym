@@ -8,16 +8,13 @@
   <meta name="description" content="Проект сайта для спортивного зала SuperGym">
   <title>SuperGym</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <!-- Подключаем фавиконки -->
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" href="img/favicon.png">
-  <!-- Добавляем предзагрузку шрифтов -->
   <link rel="preload" href="fonts/RobotoCondensedRegular.woff2" as="font">
   <link rel="preload" href="fonts/RobotoCondensedLight.woff2" as="font">
   <link rel="preload" href="fonts/RobotoCondensedBold.woff2" as="font">
   <link rel="preload" href="fonts/AlumniSansExtraBold.woff2" as="font">
   <link rel="preload" href="fonts/AlumniSansSemiBold.woff2" as="font">
-  <link rel="preload" href="fonts/rouble.woff2" as="font">
 </head>
 
 <body>
@@ -611,47 +608,38 @@
         </div>
       </section>
 
-      <!-- секция как общий блок с цветом и тп -->
       <section class="faq" data-test="faq">
-        <!-- общий див для всего -->
         <div class="container">
-
           <h2>Вопросы и ответы</h2>
-
           <div class="faq__wrapper" data-tabs="parent" data-delay="250">
-            <!-- див для позиционирования блока кнопок внутри общего дива -->
             <div class="faq__tabs categories" data-tabs="controls">
-              <!-- сами кнопочки - флекся -->
               <ul>
                 <li>
                   <button class="is-active" type="button" data-tabs="control">
-                    <p>Центр</p>
+                    <span>Центр</span>
                   </button>
                 </li>
                 <li>
                   <button type="button" data-tabs="control">
-                    <p>Абонемент</p>
+                    <span>Абонемент</span>
                   </button>
                 </li>
                 <li>
                   <button type="button" data-tabs="control">
-                    <p>Услуги</p>
+                    <span>Услуги</span>
                   </button>
                 </li>
                 <li>
                   <button type="button" data-tabs="control">
-                    <p>Правила</p>
+                    <span>Правила</span>
                   </button>
                 </li>
               </ul>
             </div>
 
             <div data-tabs="content">
-              <!-- див для позиционирования блоков ответов центр -->
               <div class="faq__answers for-load" data-tabs="element">
-                <!-- все вопросы и ответы  -->
                 <ul data-accordion="parent">
-                  <!-- вопрос ответ -->
                   <li class="is-active" data-accordion="element">
                     <div data-accordion="button">
                       <h3>Как стать членом <br>фитнес-центра?</h3>
@@ -700,11 +688,8 @@
                 </ul>
               </div>
 
-              <!-- див для позиционирования блоков ответов абонемент -->
               <div class="faq__answers" data-tabs="element">
-                <!-- все вопросы и ответы  -->
                 <ul data-accordion="parent">
-                  <!-- один вопрос ответ -->
                   <li class="is-active" data-accordion="element">
                     <div data-accordion="button">
                       <h3>Занятия с тренером входят в абонемент?</h3>
@@ -756,11 +741,8 @@
                 </ul>
               </div>
 
-              <!-- див для позиционирования блоков ответов услуги -->
               <div class="faq__answers" data-tabs="element">
-                <!-- все вопросы и ответы  -->
                 <ul data-accordion="parent">
-                  <!-- один вопрос ответ -->
                   <li class="is-active" data-accordion="element">
                     <div data-accordion="button">
                       <h3>Предлагает ли клуб услуги по консультированию по&nbsp;вопросам питания?</h3>
@@ -807,11 +789,8 @@
                 </ul>
               </div>
 
-              <!-- див для позиционирования блоков ответов правила -->
               <div class="faq__answers" data-tabs="element">
-                <!-- все вопросы и ответы  -->
                 <ul data-accordion="parent">
-                  <!-- один вопрос ответ -->
                   <li class="is-active" data-accordion="element">
                     <div data-accordion="button">
                       <h3>Есть в фитнес-центре дресс-код?</h3>
@@ -913,15 +892,9 @@
                     дочкой уже второй год, всё нравится»</p>
                 </div>
               </div>
-              <!-- <div class="feedback__button feedback__button--next swiper-button-next"
-                data-swiper="feedback-button-next">
-              </div>
-              <div class="feedback__button feedback__button--previous swiper-button-prev"
-                data-swiper="feedback-button-prev"></div> -->
             </div>
-
-
           </div>
+        </div>
       </section>
 
     </main>
@@ -930,18 +903,18 @@
         <div class="main-footer__wrapper">
           <section class="main-footer__gift">
             <h2 class="main-footer__title main-footer__title--gift">Бесплатное занятие</h2>
-            <div data-form-validate="data-form-validate" data-callback="base">
-              <form class="form" action="https://echo.htmlacademy.ru" method="get">
+            <div class="form" data-form-validate="data-form-validate" data-callback="base">
+              <form action="https://echo.htmlacademy.ru" method="get">
                 <div class="form__item" data-on-input-validate data-validate-type="text"
                   data-message-base="Необходимо указать имя!" data-required>
-                  <label class="form__label">
-                    <input class="form__input" type="text" name="person-name" min="2" placeholder="Имя" required>
+                  <label>
+                    <input type="text" name="person-name" placeholder="Имя" required>
                   </label>
                 </div>
                 <div class="form__item" data-on-input-validate data-validate-type="phone"
                   data-message-base="Укажите номер телефона!" data-required>
-                  <label class="form__label">
-                    <input class="form__input form__input--phone" type="tel" name="person-phone" placeholder="Телефон"
+                  <label>
+                    <input type="tel" name="person-phone" placeholder="Телефон"
                       required>
                   </label>
                 </div>

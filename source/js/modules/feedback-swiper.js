@@ -13,6 +13,20 @@ const initSwiperFeedback = () => {
         nextEl: feedbackNextButton,
         prevEl: feedbackPrevButton,
       },
+
+      breakpoints: {
+        320: {
+          allowTouchMove: true,
+        },
+
+        768: {
+          allowTouchMove: true,
+        },
+
+        1366: {
+          allowTouchMove: false,
+        },
+      },
     });
   }
 };
