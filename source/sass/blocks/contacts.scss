@@ -1,11 +1,12 @@
 .contacts {
   width: 50%;
-  padding: size(60px) size(103px) size(60px) size(120px);
+  padding: size(58px) size(103px) size(60px) size(120px);
   color: $color-sapphire;
   border-top: size(1px) solid #74819c;
 
   @include vp-1365 {
     width: 100%;
+    // padding: size(105px) size(100px) size(100px) size(100px);
     padding: size(105px) size(100px) size(100px) size(100px);
   }
 

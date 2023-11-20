@@ -1,6 +1,6 @@
 .gym {
   background-color: $color-default-white;
-  padding-top: size(115px);
+  padding-top: size(113px);
   position: relative;
 
   @include vp-1365 {
@@ -76,6 +76,7 @@
     font-weight: 400;
     line-height: size(22px);
     margin-bottom: size(95px);
+    // margin-bottom: size(92px);
 
     @include vp-1365 {
       font-size: size(20px);

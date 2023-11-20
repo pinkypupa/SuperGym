@@ -20,6 +20,16 @@
   }
 }
 
+.form__item {
+  &.is-invalid {
+    span {
+      color: $color-torch-red-error;
+      font-size: size(14px);
+      line-height: size(22px);
+    }
+  }
+}
+
 .form__label {
   height: min-content;
 }

@@ -3,11 +3,13 @@ $width-block-tablet: size(580px);
 $width-block-mobile: size(226px);
 
 .feedback {
-  padding-top: size(118px);
+  // padding-top: size(118px);
+  padding-top: size(120px);
   padding-bottom: size(119px);
 
   @include vp-1365 {
-    padding-top: size(99px);
+    // padding-top: size(99px);
+    padding-top: size(101px);
     padding-bottom: size(100px);
   }
 

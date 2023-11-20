@@ -1,6 +1,7 @@
 .announcement__wrapper {
   background-color: $color-default-white;
-  padding-top: size(121px);
+  // padding-top: size(121px);
+  padding-top: size(120px);
   padding-bottom: size(120px);
 
   @include vp-1365 {
@@ -9,7 +10,8 @@
   }
 
   @include vp-767 {
-    padding-top: size(70px);
+    // padding-top: size(70px);
+    padding-top: size(69px);
     padding-bottom: size(70px);
   }
 }

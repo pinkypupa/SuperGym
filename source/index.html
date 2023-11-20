@@ -612,7 +612,7 @@
       </section>
 
       <!-- секция как общий блок с цветом и тп -->
-      <section class="faq">
+      <section class="faq" data-test="faq">
         <!-- общий див для всего -->
         <div class="container">
 
@@ -869,7 +869,7 @@
         </div>
       </section>
 
-      <section class="feedback">
+      <section class="feedback" data-test="reviews">
         <div class="feedback__main-wrapper container">
           <h2>Отзывы</h2>
 
@@ -930,21 +930,24 @@
         <div class="main-footer__wrapper">
           <section class="main-footer__gift">
             <h2 class="main-footer__title main-footer__title--gift">Бесплатное занятие</h2>
-            <form class="form" action="https://echo.htmlacademy.ru" method="get" data-form="form">
-              <div class="form__item">
-                <label class="form__label">
-                  <input class="form__input" type="text" name="person-name" min="4" max="27" placeholder="Имя"
-                    data-form="form-name" required>
-                </label>
-              </div>
-              <div class="form__item">
-                <label class="form__label">
-                  <input class="form__input form__input--phone" type="tel" name="person-phone" placeholder="Телефон"
-                    data-form="form-phone" required>
-                </label>
-              </div>
-              <button class="form__button" type="submit">Отправить</button>
-            </form>
+            <div data-form-validate="data-form-validate" data-callback="base">
+              <form class="form" action="https://echo.htmlacademy.ru" method="get">
+                <div class="form__item" data-on-input-validate data-validate-type="text"
+                  data-message-base="Необходимо указать имя!" data-required>
+                  <label class="form__label">
+                    <input class="form__input" type="text" name="person-name" min="2" placeholder="Имя" required>
+                  </label>
+                </div>
+                <div class="form__item" data-on-input-validate data-validate-type="phone"
+                  data-message-base="Укажите номер телефона!" data-required>
+                  <label class="form__label">
+                    <input class="form__input form__input--phone" type="tel" name="person-phone" placeholder="Телефон"
+                      required>
+                  </label>
+                </div>
+                <button class="form__button" type="submit">Отправить</button>
+              </form>
+            </div>
           </section>
           <section class="main-footer__contacts contacts">
             <h2 class="main-footer__title main-footer__title--contacts">Контакты</h2>
