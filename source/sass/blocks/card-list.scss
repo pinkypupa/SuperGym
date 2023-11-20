@@ -145,7 +145,7 @@
 .card-list__title {
   font-size: size(26px);
   line-height: size(26px);
-  margin: size(2px) 0 size(7px);
+  margin: size(2px) 0 size(6px);
 
   @include vp-1365 {
     font-size: size(24px);
@@ -164,7 +164,7 @@
   font-size: size(16px);
   font-weight: 300;
   margin: 0;
-  margin-bottom: size(61px);
+  margin-bottom: size(69px);
 
   @include vp-1365 {
     margin-bottom: size(68px);
@@ -200,7 +200,7 @@
   line-height: size(90px);
   color: $color-egyptian-blue;
   margin: 0;
-  margin-right: size(12px);
+  margin-right: size(15px);
   user-select: none;
 
   @include vp-767 {

@@ -51,7 +51,11 @@
 }
 
 .competition__date {
-  padding: size(4px) 0 size(20px) 0;
+  display: flex;
+  align-items: center;
+  gap: size(2px);
+
+  padding: size(6px) 0 size(19px) 0;
   border-top: size(1px) solid $color-default-white;
   width: fit-content;
 

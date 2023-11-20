@@ -155,7 +155,7 @@
   &:nth-child(3n) {
     padding: size(30px);
     flex-direction: column-reverse;
-    margin: size(4px) size(60px) 0 size(60px);
+    margin: size(3px) size(60px) 0 size(60px);
     max-width: size(240px);
     min-height: size(340px);
     grid-area: 1/2/3/3;
@@ -163,7 +163,7 @@
     color: $color-default-white;
     justify-content: center;
     text-align: center;
-    gap: size(36px);
+    // gap: size(36px);
 
     @include vp-1365 {
       grid-area: 2/1/3/3;
@@ -185,7 +185,7 @@
     }
 
     span {
-      margin: 0 0 size(12px) 0;
+      margin: size(-2px) 0 size(11px) size(3px);
       color: $color-default-white;
 
       @include vp-1365 {

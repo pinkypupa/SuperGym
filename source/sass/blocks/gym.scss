@@ -150,7 +150,7 @@
   min-width: size(364px);
   top: 78%;
   left: 50%;
-  transform: translateX(-39%);
+  transform: translateX(-39%) translateY(-1%);
 
   @include vp-1365 {
     min-width: size(265px);

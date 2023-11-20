@@ -28,7 +28,7 @@
   line-height: size(54px);
   letter-spacing: size(1.62px);
   margin: 0;
-  margin-bottom: size(34px);
+  margin-bottom: size(33px);
 
   @include vp-1365 {
     font-size: size(42px);
@@ -52,7 +52,7 @@
   gap: size(50px);
   padding: 0;
   border-bottom: size(2px) solid rgba(120, 120, 120, 0.2);
-  margin: 0 0 size(36px);
+  margin: 0 0 size(37px);
 
   @include vp-1365 {
     gap: size(54px);
@@ -142,9 +142,9 @@
 
 .subscription__image {
   position: absolute;
-  bottom: -25%;
+  bottom: -20%;
   right: -12%;
-  transform: translateY(size(-14px));
+  transform: translateY(size(-18px));
 
   img {
     width: size(450px);
