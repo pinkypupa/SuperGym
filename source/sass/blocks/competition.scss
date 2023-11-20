@@ -60,7 +60,7 @@
   width: fit-content;
 
   @include vp-1365 {
-    padding: 0 0 size(6px);
+    padding: size(2px) 0 size(9px);
   }
 
   @include vp-767 {

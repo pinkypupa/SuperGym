@@ -59,14 +59,14 @@
       font-size: size(42px);
       line-height: size(42px);
       letter-spacing: size(1.26px);
-      margin-bottom: size(20px);
+      margin: size(1px) 0 size(19px);
     }
 
     @include vp-767 {
       font-size: size(32px);
       line-height: size(32px);
       letter-spacing: size(0.96px);
-      margin-bottom: size(13px);
+      margin: 0 0 size(13px);
     }
   }
 
@@ -157,7 +157,7 @@
     min-height: size(167px);
     top: 87%;
     left: 33%;
-    transform: translateX(-1%);
+    transform: translateX(size(-2px)) translateY(size(-1px));
   }
 
   @include vp-767 {
@@ -281,5 +281,12 @@
     border-left: size(13px) solid $color-default-white;
     border-bottom: size(8px) solid transparent;
     display: inline-block;
+
+    @include vp-1365 {
+      left: 52%;
+      border-top: size(4px) solid transparent;
+      border-left: size(8px) solid $color-default-white;
+      border-bottom: size(4px) solid transparent;
+    }
   }
 }

@@ -7,7 +7,7 @@
 
   @include vp-1365 {
     padding-top: size(29px);
-    padding-bottom: size(29px);
+    padding-bottom: size(28px);
   }
 
   @include vp-767 {
@@ -39,6 +39,7 @@
     @include vp-1365 {
       font-size: size(24px);
       line-height: size(26px);
+      margin-right: size(1px);
     }
 
     @include vp-767 {
@@ -52,7 +53,7 @@
 
     @include vp-1365 {
       min-width: unset;
-      width: size(111px);
+      width: size(110px);
       max-height: size(24px);
     }
 

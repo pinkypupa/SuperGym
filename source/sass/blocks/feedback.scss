@@ -3,11 +3,11 @@ $width-block-tablet: size(580px);
 $width-block-mobile: size(226px);
 
 .feedback {
-  padding-top: size(120px);
-  padding-bottom: size(120px);
+  padding-top: size(118px);
+  padding-bottom: size(119px);
 
   @include vp-1365 {
-    padding-top: size(100px);
+    padding-top: size(99px);
     padding-bottom: size(100px);
   }
 
@@ -24,13 +24,13 @@ $width-block-mobile: size(226px);
     letter-spacing: size(1.62px);
     margin: 0;
     text-align: center;
-    margin-bottom: size(36px);
+    margin-bottom: size(46px);
 
     @include vp-1365 {
       font-size: size(42px);
       line-height: size(42px);
       letter-spacing: size(1.26px);
-      margin-bottom: size(42px);
+      margin-bottom: size(41px);
     }
 
     @include vp-767 {
@@ -105,7 +105,7 @@ $width-block-mobile: size(226px);
     gap: size(21px);
 
     @include vp-1365 {
-      gap: size(13px);
+      gap: size(12px);
     }
 
     @include vp-767 {
@@ -159,14 +159,14 @@ $width-block-mobile: size(226px);
   justify-content: space-between;
   height: size(56px);
   position: absolute;
-  width: calc($width-block-desktop + size(170px));
+  width: calc($width-block-desktop + size(152px));
   bottom: 9%;
-  transform: translateY(-70%);
+  transform: translateY(-77%);
 
   @include vp-1365 {
     width: calc($width-block-tablet + size(140px));
     bottom: 13%;
-    transform: translateY(-110%);
+    transform: translateY(-92%);
   }
 
   @include vp-767 {

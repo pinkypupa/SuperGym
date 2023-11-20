@@ -20,7 +20,7 @@
   button {
     color: $color-sapphire;
     background-color: transparent;
-    padding: size(18px);
+    padding: size(20px) size(18px) size(15px);
     border: size(1px) solid rgba(16, 38, 84, 0.2);
     width: size(260px);
     overflow: hidden;
@@ -54,12 +54,9 @@
   }
 
   p {
+    font-size: size(18px);
     line-height: size(18px);
     margin: 0;
-
-    @include vp-1365 {
-      font-size: size(18px);
-    }
 
     @include vp-767 {
       font-size: size(16px);

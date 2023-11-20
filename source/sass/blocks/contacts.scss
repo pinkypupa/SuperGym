@@ -1,6 +1,6 @@
 .contacts {
   width: 50%;
-  padding: size(60px) size(103px) size(64px) size(120px);
+  padding: size(60px) size(103px) size(60px) size(120px);
   color: $color-sapphire;
   border-top: size(1px) solid #74819c;
 
@@ -46,7 +46,7 @@
   }
 
   @include vp-1365 {
-    gap: size(26px);
+    gap: size(27px);
 
     &--info {
       padding-right: size(82px);

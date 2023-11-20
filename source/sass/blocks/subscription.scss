@@ -34,7 +34,7 @@
     font-size: size(42px);
     line-height: size(42px);
     letter-spacing: size(1.26px);
-    margin-bottom: size(37px);
+    margin-bottom: size(34px);
   }
 
   @include vp-767 {
@@ -155,10 +155,10 @@
   }
 
   @include vp-1365 {
-    bottom: 44%;
+    bottom: -10%;
     right: -7%;
     min-width: size(380px);
-    transform: translateY(size(-26px));
+    transform: translateY(size(-29px)) translateX(size(2px));
   }
 
   @include vp-767 {

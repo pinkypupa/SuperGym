@@ -31,7 +31,7 @@
 
   @include vp-1365 {
     max-width: size(324px);
-    padding-top: size(31px);
+    padding-top: size(32px);
     padding-bottom: size(31px);
     column-gap: size(26px);
     margin-right: size(30px);
@@ -60,6 +60,7 @@
       font-size: size(42px);
       line-height: size(42px);
       letter-spacing: size(1.26px);
+      margin-bottom: size(9px);
     }
 
     @include vp-767 {
